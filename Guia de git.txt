@@ -1,0 +1,21 @@
+Para subir a git
+
+1. Git status
+2. Git add .
+3. Git commit -m "skrr"
+4. Git push
+
+Para bajar de git
+
+1. Te posicionas en tu repositorio (carpeta de git)
+2. Git pull
+
+_______________________________________________
+
+Editar el terminal
+
+https://ohmyposh.dev/
+
+Tutorial
+
+https://www.youtube.com/watch?v=d9y0l7yY404&list=WL&index=54&t=1434s
