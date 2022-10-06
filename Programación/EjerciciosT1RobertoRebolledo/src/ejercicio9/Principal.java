@@ -10,7 +10,7 @@ public class Principal {
 		
 		String pueblo, sitio;
 		
-		System.out.println("Bienvenido al programa.");
+		System.out.println("Bienvenido al programa");
 		System.out.println("¿Cúal es tu pueblo?");
 		pueblo = Leer.dato();
 		System.out.println("¿Cúanta gente vive en tu pueblo?");
@@ -22,7 +22,7 @@ public class Principal {
 		
 		total=plazas/habitantes;
 		
-		System.out.printf("En %s caben %3.2f %s\n\n.",sitio,total,pueblo );
+		System.out.printf("En %s caben %3.2f %s\n\n\n\n ",sitio,total,pueblo );
 		
 		System.out.println("Gracias por usar nuestro programa.");
 		

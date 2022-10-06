@@ -23,7 +23,7 @@ public class Principal {
 		total=precio*cantidad;
 		descontado=total*descuento/cien;
 		result=total-descontado;
-		System.out.printf("Usted ha comprado %1.0f %s con un descuento del %2.2f%%, al cual se queda en un total de %2.2f€.",cantidad,nproducto,descuento,result);
+		System.out.printf("Usted ha comprado %1.0f %s con un descuento del %2.2f%%, al cual se le queda un total de %2.2f€",cantidad,nproducto,descuento,result);
 		
 		
 		

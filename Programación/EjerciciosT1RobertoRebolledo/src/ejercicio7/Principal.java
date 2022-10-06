@@ -7,7 +7,7 @@ public class Principal {
 		/*Realizar un programa que nos ayude a calcular el dinero gastado en gasolina en un viaje.
 		 *  Para ello, daremos los kilómetros recorridos, el consumo del coche a los 100 Km y el precio 
 		 *  por litro de gasolina.*/
-		double gas=1.689, km= 909.00, cons100= 4.00, cien=100, consumo=0.0, precioF=0.0;
+		double gas=1.61, km= 1250.00, cons100= 7.00, cien=100, consumo=0.0, preciof=0.0;
 		
 	
 		
@@ -15,8 +15,8 @@ public class Principal {
 		
 
 		consumo= km/cien*cons100;
-		precioF= gas*consumo;
-		System.out.printf("%.2f€\n",precioF);
+		preciof= gas*consumo;
+		System.out.printf("%.2f€\n",preciof);
 		System.out.println("Gracias por usar el programa");
 		
 		

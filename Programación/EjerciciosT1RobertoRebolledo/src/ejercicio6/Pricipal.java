@@ -25,7 +25,7 @@ public class Pricipal {
 		descontado=precio*porcentaje/cien;
 		total=precio-descontado;
 		
-		System.out.printf("Se han descontado %2.2f€, el precio total del producto sería de %2.2f€.\n",descontado,total);
+		System.out.printf("Se han descontado %2.2f€, el precio total del producto sería de %2.2f€\n",descontado,total);
 		
 		System.out.println("Gracias por usar nuestro programa.");
 		
