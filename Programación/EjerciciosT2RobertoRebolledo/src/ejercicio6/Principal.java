@@ -68,7 +68,7 @@ public class Principal {
 			
 		}
 		
-		System.out.println("\n\nGracias por usar nuestra bascula.");
+		System.out.println("\n\nGracias por usar nuestra báscula.");
 		
 	}
 
