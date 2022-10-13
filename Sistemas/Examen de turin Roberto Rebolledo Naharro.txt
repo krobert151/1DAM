@@ -1,0 +1,96 @@
+ei X X r ei
+ei Y Y r ei
+ei Z Z r ei
+ei $ $ r e$
+e$ X _ l ex
+e$ Y _ l ey
+e$ Z _ l ez
+
+ey1 $ _ * halt
+ex1 $ _ * halt
+ez1 $ _ * halt
+
+ey $ $ l ey
+ey Y Y l ey
+ey X X l ey
+ey Z Z l ey
+ey _ _ r ey1
+ey1 X _ r eyx
+ey1 Z _ r eyz
+ey1 Y _ r eyy
+
+eyx X X r eyx
+eyx Y Y r eyx
+eyx Z Z r eyx
+eyx $ $ r eyx
+eyx _ X l ey
+
+eyz X X r eyz
+eyz Y Y r eyz
+eyz Z Z r eyz
+eyz $ $ r eyz
+eyz _ Z l ey
+
+eyy X X r eyy
+eyy Y Y r eyy
+eyy Z Z r eyy
+eyy $ $ r eyy
+eyy _ Y r ey2
+ey2 _ Y l ey
+
+ex $ $ l ex
+ex Y Y l ex
+ex X X l ex
+ex Z Z l ex
+ex _ _ r ex1
+ex1 X _ r exx
+ex1 Z _ r exz
+ex1 Y _ r exy
+
+exx X X r exx
+exx Y Y r exx
+exx Z Z r exx
+exx $ $ r exx
+exx _ X r ex2
+ex2 _ X l ex
+
+exz X X r exz
+exz Y Y r exz
+exz Z Z r exz
+exz $ $ r exz
+exz _ Z l ex
+
+exy X X r exy
+exy Y Y r exy
+exy Z Z r exy
+exy $ $ r exy
+exy _ Y l ex
+
+ez $ $ l ez
+ez Y Y l ez
+ez X X l ez
+ez Z Z l ez
+ez _ _ r ez1
+ez1 X _ r ezx
+ez1 Z _ r ezz
+ez1 Y _ r ezy
+
+ezx X X r ezx
+ezx Y Y r ezx
+ezx Z Z r ezx
+ezx $ $ r ezx
+ezx _ X l ez
+
+ezz X X r ezz
+ezz Y Y r ezz
+ezz Z Z r ezz
+ezz $ $ r ezz
+ezz _ Z r ez2
+ez2 _ Z l ez
+
+ezy X X r ezy
+ezy Y Y r ezy
+ezy Z Z r ezy
+ezy $ $ r ezy
+ezy _ Y l ez
+
