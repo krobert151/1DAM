@@ -66,6 +66,9 @@ public class Principal {
 			System.out.printf("En el planeta Neptuno su peso es %.2fKg",peso);
 			break;
 			
+		default: 
+			System.out.println("No es un planeta, vuelva a intentarlo.");
+			
 		}
 		
 		System.out.println("\n\nGracias por usar nuestra báscula.");
