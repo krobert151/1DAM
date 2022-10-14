@@ -25,51 +25,42 @@ public class Principal {
 		planeta=Leer.datoInt();
 		switch(planeta) {
 		
-		case 1: 
-			
-			peso = peso*eMercurio;
-			System.out.printf("En el planeta Mercurio su peso es %.2fKg",peso);
-			break;
-		case 2: 
-			
-			peso = peso*eVenus;
-			System.out.printf("En el planeta Venus su peso es %.2fKg",peso);
-			break;
-		case 3: 
-			
-			peso = peso*eTierra;
-			System.out.printf("En el planeta Tierra su peso es %.2fKg",peso);
-			break;
-		case 4: 
-			
-			peso = peso*eMarte;
-			System.out.printf("En el planeta Marte su peso es %.2fKg",peso);
-			break;
-		case 5: 
-			
-			peso = peso*eJupiter;
-			System.out.printf("En el planeta Jupiter su peso es %.2fKg",peso);
-			break;
-		case 6: 
-			
-			peso = peso*eSaturno;
-			System.out.printf("En el planeta Saturno su peso es %.2fKg",peso);
-			break;
-		case 7: 
-			
-			peso = peso*eUrano;
-			System.out.printf("En el planeta Urano su peso es %.2fKg",peso);
-			break;
-		case 8: 
-			
-			peso = peso*eNeptuno;
-			System.out.printf("En el planeta Neptuno su peso es %.2fKg",peso);
-			break;
-			
-		default: 
-			System.out.println("No es un planeta, vuelva a intentarlo.");
-			
-		}
+			case 1: 
+				peso = peso*eMercurio;
+				System.out.printf("En el planeta Mercurio su peso es %.2fKg",peso);
+				break;
+			case 2: 				
+				peso = peso*eVenus;
+				System.out.printf("En el planeta Venus su peso es %.2fKg",peso);
+				break;
+			case 3: 				
+				peso = peso*eTierra;
+				System.out.printf("En el planeta Tierra su peso es %.2fKg",peso);
+				break;
+			case 4: 				
+				peso = peso*eMarte;
+				System.out.printf("En el planeta Marte su peso es %.2fKg",peso);
+				break;
+			case 5: 				
+				peso = peso*eJupiter;
+				System.out.printf("En el planeta Jupiter su peso es %.2fKg",peso);
+				break;
+			case 6: 				
+				peso = peso*eSaturno;
+				System.out.printf("En el planeta Saturno su peso es %.2fKg",peso);
+				break;
+			case 7: 				
+				peso = peso*eUrano;
+				System.out.printf("En el planeta Urano su peso es %.2fKg",peso);
+				break;
+			case 8: 				
+				peso = peso*eNeptuno;
+				System.out.printf("En el planeta Neptuno su peso es %.2fKg",peso);
+				break;			
+			default: 
+				System.out.println("No es un planeta, vuelva a intentarlo.");
+				
+			}
 		
 		System.out.println("\n\nGracias por usar nuestra báscula.");
 		

@@ -16,12 +16,12 @@ public class Principal {
 		System.out.println("Seleccione la cantidad a sacar.");
 		retirar=Leer.datoDouble();
 		
-		if (saldoCuenta>=retirar) {
+		if (saldoCuenta<=retirar) {
+			System.out.println("Lo sentimos no podemos retirar tal cantidad de dinero, por favor intenelo de nuevo con una cantidad inferior.");
 			
+		}else {
 			saldoCuenta=saldoCuenta-retirar;
 			System.out.printf("Usted ha retirado una cantidad de %.2f€ y le quedan %.2f€ de saldo",retirar,saldoCuenta);
-		}else {
-			System.out.println("Lo sentimos no podemos retirar tal cantidad de dinero, por favor intenelo de nuevo con una cantidad inferior.");
 		}
 		
 		System.out.println("\n\nGracias por usar nuestro programa.");
