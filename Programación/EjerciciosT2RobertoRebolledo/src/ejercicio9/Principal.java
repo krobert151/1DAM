@@ -14,11 +14,11 @@ public class Principal {
 		do {
 			System.out.println("Seleccione un número");
 			num=Leer.datoDouble();
-			if(num>cero){
+			if(num>=cero){
 				suma+=num;
 			};		
 			
-		}while(num>cero);
+		}while(num>=cero);
 		
 		System.out.printf("%.2f es el resultado de la suma\n\n",suma);
 		System.out.println("Gracias por usar el programa.");

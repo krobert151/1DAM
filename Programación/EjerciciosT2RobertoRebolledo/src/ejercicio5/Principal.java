@@ -12,18 +12,20 @@ public class Principal {
 		b. Pedir el número de entradas.
 		c. Calcular el precio final y mostrarlo.*/ 
 
-		int pelicula,numE;
+		int pelicula,numE,cond;
 		double tresD=10.50, VIP=15.6, normal=6, kid=4.5, total;
 		String P3D="\"Avatar 2\"", PVIP="\"Saga JURASSIC PARK\"", Pnomral="\"Smile\"",Pkid="\"Tadeo Jones 3\"";
-		System.out.println("Bienvenido al cine, selecciona que películas deseas ver.\n");
-		System.out.println("1.- Avatar 2 			(Sala 3D)");
-		System.out.println("2.- Smile 	 		(Sala normal)");
-		System.out.println("3.- Tadeo Jones 3		(Sala kid)");
-		System.out.println("4.- Saga JURASSIC PARK  	(Sala VIP)");
-		pelicula=Leer.datoInt();
 		
+		
+		do {
+			System.out.println("Bienvenido al cine, selecciona que películas deseas ver.\n");
+			System.out.println("1.- Avatar 2 			(Sala 3D)");
+			System.out.println("2.- Smile 	 		(Sala normal)");
+			System.out.println("3.- Tadeo Jones 3		(Sala kid)");
+			System.out.println("4.- Saga JURASSIC PARK  	(Sala VIP)");
+			pelicula=Leer.datoInt();
 		switch(pelicula) {
-			
+		
 		case 1:
 			
 			System.out.printf("Ha saleccionado ver %s \n",P3D);
@@ -64,8 +66,15 @@ public class Principal {
 			
 			
 			break;
+		default:
+			System.out.println("Seleccione otro número");
 		
 		}
+		System.out.println("\n\n¿Desea vovler a pedir otra entrada?");
+		System.out.println("1.- Si");
+		System.out.println("2.- No");
+		cond=Leer.datoInt();
+		}while(cond==1);
 		System.out.println("\nGracias por usar nuestro cine.");
 		
 	}
