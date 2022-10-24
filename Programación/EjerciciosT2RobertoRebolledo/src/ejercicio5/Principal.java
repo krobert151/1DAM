@@ -18,7 +18,7 @@ public class Principal {
 		
 		
 		do {
-			System.out.println("Bienvenido al cine, selecciona que películas deseas ver.\n");
+			System.out.println("\nBienvenido al cine, selecciona que películas deseas ver.\n");
 			System.out.println("1.- Avatar 2 			(Sala 3D)");
 			System.out.println("2.- Smile 	 		(Sala normal)");
 			System.out.println("3.- Tadeo Jones 3		(Sala kid)");
