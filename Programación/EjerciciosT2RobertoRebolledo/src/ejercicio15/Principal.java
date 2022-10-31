@@ -11,8 +11,8 @@ public class Principal {
 		 * Se valorarán las comprobaciones que se hagan sobre los datos introducidos 
 		 * (por ejemplo, no dividir por cero).*/
 		
-		int seleccion,cero=0;
-		double num1,num2,num3,total;
+		int seleccion,cero=0,num3;
+		double num1,num2,total;
 		System.out.println("Bienvenido a la calculadora");
 		do {
 			System.out.println("\nCalculadora\n");
@@ -61,21 +61,29 @@ public class Principal {
 				break;
 			case 5:
 				System.out.println("Seleccione el número");
-				num1=Leer.datoDouble();
-				num2=num1%2;
-				
-			
+				num3=Leer.datoInt();
+				num1=num3%2;
+				if(num1==0){
+					
+					System.out.println("El número "+num3+" es par");
+					
+				}else {
+					
+					System.out.println("El número "+num3+" es impar");
+
+				}				
+				break;			
 			
 			case 0:
-				
 				break;
+				
 			default:
 				System.out.println("Número inválido, por favor seleccione otro número.");
 				
 			}		
 			
 		}while(seleccion!=cero);
-		System.out.println("Gracia spor usar el programa");
+		System.out.println("Gracias por usar el programa");
 	}
 
 }
