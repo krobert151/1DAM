@@ -21,6 +21,7 @@ public class Principal {
 			System.out.println("3.-Multiplicación");
 			System.out.println("4.-Dividsión");
 			System.out.println("5.-Par o Impar");
+			System.out.println("0.-Salir");
 			seleccion=Leer.datoInt();	
 			switch(seleccion) {
 			
@@ -50,6 +51,19 @@ public class Principal {
 				System.out.printf("%.2f x %.2f = %.2f\n",num1,num2,total);
 				break;
 			
+			case 4: 
+				System.out.println("Seleccione el número que quiera dividir");
+				num1=Leer.datoDouble();
+				System.out.println("Selecicone por cúanto lo quiere dividir");
+				num2=Leer.datoDouble();
+				total=num1/num2;
+				System.out.printf("%.2f / %.2f = %.2f\n",num1,num2,total);
+				break;
+			case 5:
+				System.out.println("Seleccione el número");
+				num1=Leer.datoDouble();
+				num2=num1%2;
+				
 			
 			
 			case 0:
@@ -61,7 +75,7 @@ public class Principal {
 			}		
 			
 		}while(seleccion!=cero);
-		
+		System.out.println("Gracia spor usar el programa");
 	}
 
 }

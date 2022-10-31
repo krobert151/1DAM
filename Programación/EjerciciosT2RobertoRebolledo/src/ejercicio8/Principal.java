@@ -10,14 +10,16 @@ public class Principal {
 		int cant=0, cantFinal=10;
 		double suma=0, producto=1, num;
 		System.out.println("Bienvenido al programa que te calcula la suma y el producto de 10 números.\n");
-		while(cant<cantFinal){
-			System.out.println("Introduzca un número");
+		do {
+			System.out.println("Introduzca un número, pulse un número negativo para salir");
 			num=Leer.datoDouble();
-			suma+=num;
-			producto*=num;
-			cant++;
-		};
+			while(cant<cantFinal){
+				suma+=num;
+				producto*=num;
+				cant++;
+			};
 		System.out.printf("\nEl producto de los números sería %.2f y la suma %.2f",producto,suma);
+		}while(num>=0);
 		System.out.println("\n\nGracias por usar el programa");
 	}
 
