@@ -22,7 +22,7 @@ public class Principal {
 			if(nota<=10){
 				if(nota<5) {
 					suspensas++;
-				};
+				}
 				suma+=nota;
 				cant++;
 			}else {
