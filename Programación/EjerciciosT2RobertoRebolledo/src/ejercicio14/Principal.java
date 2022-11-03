@@ -15,19 +15,19 @@ public class Principal {
 		System.out.println("Bienvenido");
 		
 		do {
-			System.out.println("¿Qúe desea hacer?\n\n");
-			System.out.println("1.-Ver saldo");
-			System.out.println("2.-Retirar dinero");
-			System.out.println("3.-Comprar entradas");
-			System.out.println("4.-Ingresar dinero");
-			System.out.println("0.-Salir");
+			System.out.println("¿Qúe desea hacer?\n\n.");
+			System.out.println("1.-Ver saldo.");
+			System.out.println("2.-Retirar dinero.");
+			System.out.println("3.-Comprar entradas.");
+			System.out.println("4.-Ingresar dinero.");
+			System.out.println("0.-Salir.");
 			seleccion=Leer.datoInt();
 			
 			switch(seleccion){
 			
 				case 1: 
 					
-					System.out.printf("Actualmente tienes un saldo de %.2f€\n",saldoBase);
+					System.out.printf("Actualmente tienes un saldo de %.2f€\n.",saldoBase);
 					break;
 					
 				case 2:
@@ -35,17 +35,17 @@ public class Principal {
 					System.out.println("Seleccione la cantidad de dinero a retirar.");
 					retiro=Leer.datoDouble();
 					saldoBase-=retiro;
-					System.out.printf("Actualmente tienes un saldo de %.2f€\n",saldoBase);
+					System.out.printf("Actualmente tienes un saldo de %.2f€\n.",saldoBase);
 					break;
 				
 				case 3:
 					do {
-					System.out.println("Entradas para el Resurretion Fest");
-					System.out.println("\n Seleccione su tipo de entrtada");
-					System.out.println("\n1.- Entrada para menores - 200€");
-					System.out.println("\n2.- ENtrada para adultos - 300€");
-					System.out.println("\n3.- Entrada para usuarios VIP - 600€");
-					System.out.println("\n\n0.- Para salir");
+					System.out.println("Entradas para el Resurretion Fest.");
+					System.out.println("\n Seleccione su tipo de entrtada.");
+					System.out.println("\n1.- Entrada para menores - 200€.");
+					System.out.println("\n2.- ENtrada para adultos - 300€.");
+					System.out.println("\n3.- Entrada para usuarios VIP - 600€.");
+					System.out.println("\n\n0.- Para salir.");
 					seleccionE=Leer.datoInt();
 					
 					
@@ -97,10 +97,10 @@ public class Principal {
 						
 				case 4:
 					
-					System.out.println("Seleccione la cantidad de dinero a ingresar");
+					System.out.println("Seleccione la cantidad de dinero a ingresar.");
 					ingreso=Leer.datoDouble();
 					saldoBase+=ingreso;
-					System.out.printf("Actualmente tienes un saldo de %.2f€\n",saldoBase);
+					System.out.printf("Actualmente tienes un saldo de %.2f€.\n",saldoBase);
 					break;
 				
 				

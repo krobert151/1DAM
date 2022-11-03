@@ -36,7 +36,7 @@ public class Principal {
 			
 				case 2:
 					do{
-						System.out.println("Selecciona la posición del número qwue se encuentra entre el "+min+" o el "+max+" o seleccione 0 para salir");
+						System.out.println("Selecciona la posición del número que se encuentra entre el "+min+" o el "+max+" o seleccione 0 para salir");
 						selec=Leer.datoInt();
 						System.out.println("Ha seleccionado la posición número "+selec);
 						System.out.println(num[selec-1]);
