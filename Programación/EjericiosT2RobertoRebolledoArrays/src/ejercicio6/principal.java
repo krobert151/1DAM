@@ -1,6 +1,5 @@
 package ejercicio6;
 
-import java.util.Iterator;
 
 import utilidades.Leer;
 
