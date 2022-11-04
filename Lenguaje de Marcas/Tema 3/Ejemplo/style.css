@@ -1,0 +1,27 @@
+.font-family{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.font-family2{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+@font-face {
+    font-family: "Valu Old Caps";
+    src: url('valuoldcaps.ttf');
+}
+.font-face{
+    font-family:Valu Old Caps ;
+}
+@font-face {
+    font-family: "Stoky";
+    src: url('stocky.ttf');
+}
+.font-face2{
+    font-family: Stoky;
+}
+.font1{
+    font:'Courier New', Courier, monospace, bold ;
+
+}
+.font2{
+    font: 18px bolder; 
+}
