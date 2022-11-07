@@ -14,15 +14,16 @@ public class Principal {
 			• Mostrar por pantalla la suma de todos los elementos.
 			• Mostrar el mayor y el menor guardados en el array.
 			• Modificar un valor elegido por el usuario.*/
-		
-		int tam,max,min,suma=0,men=0,may=0,sino,cambio,nuevo;
 		int num[];
+		int tam,max,min,suma=0,sino,cambio,nuevo;
+		
 		Random r= new Random (System.currentTimeMillis());
 		System.out.println("Bienvenidos al progarma");
 		
 		System.out.println("Introduzca el tamaño de los números a almacenar");
 		tam=Leer.datoInt();
 		num= new int[tam];
+		int men=num[1],may=num[1];
 		
 		System.out.println("Seleccione el número máximo que quieras que pueda generar");
 		max=Leer.datoInt();
@@ -44,17 +45,15 @@ public class Principal {
 		
 			if(may<num[i]) {
 				
-				may=num[i];
-				
+				may=num[i];				
 			}
 			
-			if(num[i]>num[i+1]) {
+			if(men>num[i]) {
 				
-				men=num[i+1];
+				men=num[i];
 				
 			}
-		
-		
+				
 		}
 		System.out.println("El número mayor es "+may+" y el menor es "+men);
 		
