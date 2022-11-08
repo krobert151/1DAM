@@ -17,7 +17,7 @@ public class Principal {
 		int num[];
 		int tam,max,min,suma=0,sino,cambio,nuevo;
 		
-		Random r= new Random (System.currentTimeMillis());
+		Random r= new Random (System.nanoTime());
 		System.out.println("Bienvenidos al progarma");
 		
 		System.out.println("Introduzca el tamaño de los números a almacenar");
