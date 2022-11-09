@@ -1,0 +1,34 @@
+body{
+    background-color: rgb(28, 28, 28);
+    color: rgb(214, 216, 218);
+}
+
+@font-face {
+    font-family:"PartyConfetti" ;
+    src: url('../fonts/Party\ Confetti.ttf');
+}
+
+h1{
+    font-family: PartyConfetti;
+    letter-spacing: 2pt;
+    font-size: 35pt;    
+    background-color: black;
+    text-indent: 30pt;
+    width: 50%;
+
+}
+
+
+h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+li{
+    line-height: 20pt;
+}
+.datos{
+    font-weight: bold;
+}
+.info{
+    font-style: italic;
+}
+    
