@@ -11,7 +11,8 @@ public class Principal {
 		double [][] tabla;
 		String [][] grafico;
 		double nota=0;
-		int asig=6, tema,menu, fil=0, col=0,cien=100,maxFalta=15,asigFaltada,falta,salir,numAlumnos,numAl,tamGrup,puntos=10,numAsig,menu2,menu3,notaGrafico;
+		int asig=6, tema, fil=0, col=0,cien=100,maxFalta=15,asigFaltada,falta,salir,numAlumnos,numAl,tamGrup,puntos=10,numAsig,notaGrafico;
+		int menu,menu2,menu3,menu4;
 		int  [] horas = {192,128,96,96,192,256};
 		int [] faltas = new int [asig];
 		Random r= new Random (System.nanoTime());
@@ -21,6 +22,7 @@ public class Principal {
 		
 		System.out.println("Insterte el número de temas");
 		tema=Leer.datoInt();
+		grafico= new String [puntos][tema];
 		tabla= new double [asig] [tema];
 		grafico= new String [puntos][tema];
 		System.out.println("¿Cuántos alumnos hay en este curso?");
@@ -36,6 +38,14 @@ public class Principal {
 				
 			}
 		}
+		for (int i = 0; i < grafico.length; i++) {
+			
+			for (int j = 0; j < grafico[i].length; j++) {
+				
+				grafico[i][j]="-";
+				
+			}
+		}
 		
 		for (int i = 0; i < faltas.length; i++) {
 			faltas[i]=(horas[i]*maxFalta)/cien;
@@ -48,6 +58,7 @@ public class Principal {
 			System.out.println("3.- Faltas");
 			System.out.println("4.- Trabajo con compañeros");
 			System.out.println("5.- Gráficos");
+			System.out.println("0.- Salir del programa");
 			
 			menu=Leer.datoInt();
 			switch(menu){
@@ -346,11 +357,11 @@ public class Principal {
 					System.out.println("1.-Registrar alumnos");
 					System.out.println("2.-Ver lista de alumnos");
 					System.out.println("3.-Pareja aleatoria");
-					System.out.println("4.-Grupo aleatoorio");
+					System.out.println("4.-Grupo aleatorio");
 					System.out.println("0.-Salir");
-					menu=Leer.datoInt();
+					menu4=Leer.datoInt();
 					
-					switch(menu) {
+					switch(menu4) {
 					
 					case 1:
 						System.out.println("\n");
@@ -377,7 +388,7 @@ public class Principal {
 						System.out.println("\n");
 						break;
 						
-					/*case 4:
+					case 4:
 						System.out.println("Selecciona el tamaño de los grupos");
 						tamGrup=Leer.datoInt();
 						while(tamGrup>numAlumnos|tamGrup<0) {
@@ -393,7 +404,7 @@ public class Principal {
 						}
 						System.out.print(".\n\n");
 						
-						break;*/
+						break;
 					case 0:
 						
 						break;
@@ -405,7 +416,7 @@ public class Principal {
 					
 					}
 					
-				}while(menu!=0);
+				}while(menu4!=0);
 				
 				break;
 				
@@ -420,48 +431,45 @@ public class Principal {
 				}
 				System.out.println(" ");
 				numAsig=Leer.datoInt();
-				for (int i = 0; i < puntos; i++) {
+				for (int i = 0; i < grafico.length ; i++) {
 					
 					
 					
-					for (int j = 0; j < tema; j++) {
+					for (int j = 0; j < grafico[i].length; j++) {
 						
-						notaGrafico = (int)tabla[numAsig][j];// Me lo registra todo a 0
-						System.out.println(notaGrafico);
+						
+						notaGrafico = (int)tabla[numAsig-1][j];
 						switch(notaGrafico) {
 						
 						case 10:
-							grafico[i][j]="X";
+							grafico[puntos-10][j]="X";
 							break;
 						case 9:
-							grafico[i][j]="X";
+							grafico[puntos-9][j]="X";
 							break;
 						case 8:
-							grafico[i][j]="X";
+							grafico[puntos-8][j]="X";
 							break;
 						case 7:
-							grafico[i][j]="X";
+							grafico[puntos-7][j]="X";
 							break;
 						case 6:
-							grafico[i][j]="X";
+							grafico[puntos-6][j]="X";
 							break;
 						case 5:
-							grafico[i][j]="X";
+							grafico[puntos-5][j]="X";
 							break;
 						case 4:
-							grafico[i][j]="X";
+							grafico[puntos-4][j]="X";
 							break;
 						case 3:
-							grafico[i][j]="X";
+							grafico[puntos-3][j]="X";
 							break;
 						case 2:
-							grafico[i][j]="X";
+							grafico[puntos-2][j]="X";
 							break;
 						case 1:
-							grafico[i][j]="X";
-							break;
-						case 0:
-							grafico[i][j]="X";
+							grafico[puntos-1][j]="X";
 							break;
 						
 							
@@ -473,18 +481,21 @@ public class Principal {
 					
 				}
 				
-				for (int k = 0; k < puntos; k++) {
+				for (int k = 0; k < grafico.length; k++) {
 					System.out.println();
-					for (int k2 = 0; k2 < tema; k2++) {
+					System.out.print(10-k+"\t");
+					for (int k2 = 0; k2 < grafico[k].length; k2++) {
 						
 						System.out.print(grafico[k][k2]+("\t"));
-
-						
-						
-					}
-					
+	
+					}	
 				}
-				
+				System.out.println("\n");
+				System.out.print("\t");
+				for (int i = 0; i < tema; i++) {
+					System.out.print("Tema "+(i+1)+"\t");
+				}
+				 
 				
 				break;
 				
@@ -503,7 +514,7 @@ public class Principal {
 			}
 			
 		}while(menu!=0);
-		
+		System.out.println("Gracias por usar el programa.");
 		
 
 
