@@ -515,16 +515,7 @@ public class Principal {
 			
 		}while(menu!=0);
 		System.out.println("Gracias por usar el programa.");
-		
-
-
-
-		
-
-			
-		
-
-		
+				
 		
 	}
 
