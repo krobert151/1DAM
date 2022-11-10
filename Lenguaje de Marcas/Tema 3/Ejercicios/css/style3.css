@@ -13,22 +13,43 @@ h1{
     letter-spacing: 2pt;
     font-size: 35pt;    
     background-color: black;
-    text-indent: 30pt;
+    text-indent: 25pt;
     width: 50%;
+    margin: auto;
 
 }
-
+.divimg{
+    width: 50%;
+    margin:auto;
+}
 
 h2{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 50%;
+    margin: auto;
+    background-color: black;
+    text-indent: 25pt;
+
 }
 li{
     line-height: 20pt;
+    width: 50%;
+    margin: auto;
 }
+p{    width: 50%;
+    margin: auto;}
 .datos{
     font-weight: bold;
+
 }
 .info{
     font-style: italic;
 }
+p.foto{
+    width: min-content;
+    background-color: black;
+    margin-left: 25%;
+    text-indent: 25pt;
+}
+
     
