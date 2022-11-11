@@ -82,8 +82,6 @@ public class Principal {
 				}
 				if(iftema!=0) {
 					System.out.print("     ");
-
-
 				}else {
 					System.out.print("\t");
 				}
@@ -92,40 +90,30 @@ public class Principal {
 				for (int i = 0; i < tema; i++) {
 					if (i==0) {
 						System.out.print("\t╔═══════╦");
-
 					}else {
 						if(i==(tema-1)) {
 							System.out.print("═══════╗");
-						}else {
-							
+						}else {							
 							System.out.print("═══════╦");
-
-						}
-						
-					}
-					
-					
+						}						
+					}									
 				}
 				System.out.print("\n\t");
 				for (int i = 0; i < tema; i++) {
 					if(i==(tema-1)) {
 						System.out.print("║Tema "+(i+1)+"║");	
-
 					}else {
 						if(i<9){
-							System.out.print("║Tema "+(i+1)+"\t");	
-							
+							System.out.print("║Tema "+(i+1)+"\t");								
 						}else {
 							System.out.print("║Tema "+(i+1));	
 						}						
 					}
-
 				}
 				System.out.print("\n╔═══════╬");
 				for (int i = 0; i < tema; i++) {
 					if(i==(tema-1)) {
 						System.out.print("═══════╣");
-
 					}else {
 						System.out.print("═══════╬");
 					}
@@ -139,33 +127,24 @@ public class Principal {
 					}
 					if(i==(tablaNotas.length-1)){
 						System.out.print("║\n╚═══════╩");
-
 					}else {
-						System.out.print("║\n╠═══════╬");
-						
+						System.out.print("║\n╠═══════╬");						
 					}
 					
 					for (int j = 0; j < tablaNotas[i].length; j++) {
-						if(i==(tablaNotas.length-1)) {
-							
+						if(i==(tablaNotas.length-1)) {						
 							if(j==(tablaNotas[i].length-1)) {
 								System.out.print("═══════╝");
-
 							}else {
 								System.out.print("═══════╩");								
-							}
-	
-						}else {
-							
+							}	
+						}else {							
 							if(j==(tablaNotas[i].length-1)) {
 								System.out.print("═══════╣");
-
 							}else {
-								System.out.print("═══════╬");
-		
+								System.out.print("═══════╬");		
 							}
 						}
-
 					}	
 				}
 				System.out.println(" ");
@@ -185,40 +164,110 @@ public class Principal {
 					switch(menu2) {
 					
 					case 1:
-						System.out.println(" ");
-						System.out.print("\t");
+						// MOSTRAR LA TABLA DE NOTAS->
+						System.out.println("\n");
+						for (int i = 0; i < mitad; i++) {
+							System.out.print("\t");
+						}
+						if(iftema!=0) {
+							System.out.print("     ");
+						}else {
+							System.out.print("\t");
+						}
+						System.out.println(curso);
+						System.out.print("\n");
 						for (int i = 0; i < tema; i++) {
-							System.out.print("Tema "+(i+1)+"\t");	
-						} 
+							if (i==0) {
+								System.out.print("\t╔═══════╦");
+							}else {
+								if(i==(tema-1)) {
+									System.out.print("═══════╗");
+								}else {							
+									System.out.print("═══════╦");
+								}						
+							}									
+						}
+						System.out.print("\n\t");
+						for (int i = 0; i < tema; i++) {
+							if(i==(tema-1)) {
+								System.out.print("║Tema "+(i+1)+"║");	
+							}else {
+								if(i<9){
+									System.out.print("║Tema "+(i+1)+"\t");								
+								}else {
+									System.out.print("║Tema "+(i+1));	
+								}						
+							}
+						}
+						System.out.print("\n╔═══════╬");
+						for (int i = 0; i < tema; i++) {
+							if(i==(tema-1)) {
+								System.out.print("═══════╣");
+							}else {
+								System.out.print("═══════╬");
+							}
+						}
 						
 						for (int i = 0; i < tablaNotas.length; i++) {
-							System.out.println("");
+							System.out.print("\n║ ");
 							System.out.print(asigName[i]+"\t");
 							for (int j = 0; j < tablaNotas[i].length; j++) {
-								System.out.print(tablaNotas[i][j]+"\t");
-							}		
+								System.out.print("║  "+tablaNotas[i][j]+"\t");
+							}
+							if(i==(tablaNotas.length-1)){
+								System.out.print("║\n╚═══════╩");
+							}else {
+								System.out.print("║\n╠═══════╬");						
+							}
 							
+							for (int j = 0; j < tablaNotas[i].length; j++) {
+								if(i==(tablaNotas.length-1)) {						
+									if(j==(tablaNotas[i].length-1)) {
+										System.out.print("═══════╝");
+									}else {
+										System.out.print("═══════╩");								
+									}	
+								}else {							
+									if(j==(tablaNotas[i].length-1)) {
+										System.out.print("═══════╣");
+									}else {
+										System.out.print("═══════╬");		
+									}
+								}
+							}	
 						}
-						System.out.println("\n\nSelecciona la Asignatura");
-						System.out.print("\nAsignatura\t");
-						System.out.println("Número");
+						// <- MOSTRAR LA TABLA DE NOTAS
+						// -> 
+						System.out.println(" ");
+						System.out.println("\n\n Seleccione el número de la asignatura.\n");
+						System.out.print("┌───────────────┬───────┐");
+						System.out.print("\n│ Asignatura\t");
+						System.out.println("│Número\t│");
+						System.out.println("├───────────────┼───────┤");
+
 						for (int i = 0; i < asigName.length; i++) {
-							System.out.print(asigName[i]+"\t");
-							System.out.println("\t"+(i+1));
+							System.out.print(("│ ")+asigName[i]+"\t\t│");
+							System.out.println(" "+(i+1)+"\t│");
+							if(i==(asigName.length-1)) {
+								System.out.println("└───────────────┴───────┘");
+							}else {
+								System.out.println("├───────────────┼───────┤");
+
+							}
 						}
 						System.out.println(" ");
-						System.out.println("Por favor, indique el número de asignatura");
 						fil=Leer.datoInt();
-						System.out.println("Por favor, selecciona un tema");
-						for (int i = 0; i <tema; i++) {
-							System.out.println("Tema "+(i+1)+"\t");	
-						}
-						System.out.println(" ");
+						System.out.println("Selecciona una unidad del 1 al "+(tema)+".");
 						col=Leer.datoInt();
+						while(col>tema|col<0) {
+							System.out.println("Número inválido, recuerda que los temas son del 1 al "+(tema)+".");
+							col=Leer.datoInt();
+						}
 						System.out.println("Por favor, indique una nota");
 						tablaNotas[fil-1][col-1]=Leer.datoDouble();
 						while(tablaNotas[fil-1][col-1]>10|tablaNotas[fil-1][col-1]<0){
 							System.out.println("La nota introducida debe ser entre 0 y 10");	
+							tablaNotas[fil-1][col-1]=Leer.datoDouble();
 						}
 						System.out.println("1.- Para añadir otra nota.");
 						System.out.println("0.- Para salir.");
