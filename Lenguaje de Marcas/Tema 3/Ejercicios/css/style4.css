@@ -1,0 +1,32 @@
+body{
+
+    background-image:url(../img/pleurodeles-watl-4.jpg);
+    background-size: 100% ,100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+@font-face {
+    font-family:"rimas1" ;
+    src: url("../fonts/Poems\ &\ Pens\ Bold\ Italic.ttf");
+}
+h1,h2{
+
+    color: rgb(19, 0, 0);
+    
+    margin-left: 5%;
+    
+    font-family:'poema1';
+
+}
+p.rimas1{
+    width: 50%;
+    margin-left: 5%;
+    text-align: justify ;
+    font-family:'rimas1';
+    font-size: 150%;
+    font-weight: bolder;
+
+
+}
+
+
