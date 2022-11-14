@@ -10,8 +10,8 @@ public class Principal {
 	public static void main(String[] args) {
 		
 		double[][] tablaNotas;
-		String [][] grafico;
 		int [][] tablaFaltas;
+		String [][] grafico;
 		String [] asigName;
 		String curso;
 		String [] nombAlumnos;
@@ -21,7 +21,7 @@ public class Principal {
 		int cero=0,uno=1,dos=2,pareja;
 		double ifmitad=0,iftema;
 		Random num= new Random (System.nanoTime());
-		
+		System.out.println("  ");
 		System.out.println("             ▓█▓    ███                                              ");
 		System.out.println("          ▒███████▓ ███                                              ");
 		System.out.println("          ███   ▓██ ███  ██████    ██████   ██████    ▄▄▄       ▄▄▄    ");
@@ -59,6 +59,7 @@ public class Principal {
 		tablaNotas= new double [numAsig][tema];
 		grafico= new String [puntos][tema];
 		
+		
 		for (int i = 0; i < tablaNotas.length; i++) {
 			for (int j = 0; j < tablaNotas[i].length; j++) {	
 				tablaNotas[i][j]=0;
@@ -73,9 +74,9 @@ public class Principal {
 		for (int i = 0; i < nombAlumnos.length; i++) {
 			nombAlumnos[i]=" ";
 		}
-
-		
-		
+		for (int i = 0; i < grupos.length; i++) {
+			grupos[i]=0;
+		}
 
 
 		do{
@@ -285,10 +286,14 @@ public class Principal {
 							}
 						}
 						System.out.println(" ");
-						// -> MOSTRAR TABLA DE ASIGNATURAS
-						fil=Leer.datoInt();
+						fil=Leer.datoInt();/*Seleccionar asignatura*/
+						while(fil>(numAsig)|fil<=0){
+							System.out.println("Recuerda que solo tienes "+numAsig+" asignaturas en "+curso+", vuelve a elegir,");
+							fil=Leer.datoInt();
+
+						}
 						System.out.println("Selecciona una unidad del 1 al "+(tema)+".");
-						col=Leer.datoInt();
+						col=Leer.datoInt();/*Seleccionar undiad*/
 						while(col>tema|col<0) {
 							System.out.println("Número inválido, recuerda que los temas son del 1 al "+(tema)+".");
 							col=Leer.datoInt();
@@ -303,7 +308,7 @@ public class Principal {
 						
 					case 2:
 						System.out.println("Selecciona una unidad del 1 al "+(tema)+".");
-						col=Leer.datoInt();
+						col=Leer.datoInt();/*Seleccionar undiad*/
 						while(col>tema|col<0) {
 							System.out.println("Número inválido, recuerda que los temas son del 1 al "+(tema)+".");
 							col=Leer.datoInt();
@@ -420,7 +425,12 @@ public class Principal {
 						}
 						System.out.println(" ");
 						// -> MOSTRAR TABLA DE ASIGNATURAS
-						fil=Leer.datoInt();
+						fil=Leer.datoInt();/*Seleccionar asignatura*/
+						while(fil>(numAsig)|fil<=0){
+							System.out.println("Recuerda que solo tienes "+numAsig+" asignaturas en "+curso+", vuelve a elegir,");
+							fil=Leer.datoInt();
+
+						}
 						
 						
 						for (int i = 0; i < tema; i++) {
@@ -479,7 +489,8 @@ public class Principal {
 					case 0:
 						break;
 					default:
-						
+						System.out.println("Opción no disponible, vuelva a intentarlo.");
+						break;
 					}
 				}while(menu3!=0);
 				
@@ -495,10 +506,12 @@ public class Principal {
 					System.out.println("\t2.-Justificar una falta.");
 					System.out.println("\t3.-Ver faltas.");
 					System.out.println("\n\t0.-Salir");
+					System.out.println("\t(Recuerda que antes debes registrar las horas totales de las asignaturas de "+curso+", de lo contrario las horas aparecerán en blanco.)");
 					System.out.println("───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────");
 					menu4=Leer.datoInt();
 					switch(menu4) {
 						case 1:
+							// -> MOSTRAR TABLA DE ASIGANTURAS
 							System.out.println(" ");
 							System.out.println("\n\n Seleccione el número de la asignatura.\n");
 							System.out.print("┌───────────────┬───────┐");
@@ -517,7 +530,12 @@ public class Principal {
 								}
 							}
 							System.out.println(" ");
-							fil=Leer.datoInt();
+							fil=Leer.datoInt();/*Seleccionar asignatura*/
+							while(fil>(numAsig)|fil<=0){
+								System.out.println("Recuerda que solo tienes "+numAsig+" asignaturas en "+curso+", vuelve a elegir,");
+								fil=Leer.datoInt();
+
+							}
 							
 							System.out.println("Por favor digame cuantas horas ha faltado");
 							numFalta=Leer.datoInt();
@@ -542,6 +560,7 @@ public class Principal {
 							
 							break;
 						case 2:
+							// -> MOSTRAR TABLA DE ASIGANTURAS
 							System.out.println(" ");
 							System.out.println("\n\n Seleccione el número de la asignatura.\n");
 							System.out.print("┌───────────────┬───────┐");
@@ -560,7 +579,12 @@ public class Principal {
 								}
 							}
 							System.out.println(" ");
-							fil=Leer.datoInt();
+							fil=Leer.datoInt();/*Seleccionar asignatura*/
+							while(fil>(numAsig)|fil<=0){
+								System.out.println("Recuerda que solo tienes "+numAsig+" asignaturas en "+curso+", vuelve a elegir,");
+								fil=Leer.datoInt();
+
+							}
 							System.out.println("Por favor digame cuantas horas ha justificado");
 							numFalta=Leer.datoInt();
 							
@@ -607,11 +631,11 @@ public class Principal {
 							
 							break;
 						default:
-								System.out.println("Opción no valida");
+							System.out.println("Opción no disponible, vuelva a intentarlo.");
 							break;
 								
 					}
-					
+	
 				
 				}while(menu4!=0);
 				break;
@@ -625,13 +649,14 @@ public class Principal {
 					System.out.println("\t3.-Hacer grupos de tres.");
 					System.out.println("\t4.-Hacer grupos de cuatro.");
 					System.out.println("\n\t0.-Salir");
+					System.out.println("\t(Recuerda que antes debes registrar los nombres de los alumnos de "+curso+", de lo contrario los nombres aparecerán en blanco.)");
 					System.out.println("───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────");
 					menu5=Leer.datoInt();
 					switch(menu5) {
 						case 1:
-							System.out.println("Alumnos de "+(curso));
+							System.out.println("  Alumnos de "+(curso)+"\n");
 							for (int i = 0; i < nombAlumnos.length; i++) {
-								System.out.println((i+1)+".- "+nombAlumnos[i]);
+								System.out.println("\t"+(i+1)+".- "+nombAlumnos[i]);
 							}
 							System.out.println("\n");
 							break;
@@ -642,7 +667,7 @@ public class Principal {
 							
 							break;
 						case 3:
-							grupos[uno]=num.nextInt(numAlumnos-1+1)+1;
+							grupos[uno]=num.nextInt((numAlumnos-1)+1);
 							for (int i = 0; i < nombAlumnos.length; i++) {
 								grupos[i]=num.nextInt((numAlumnos-1)+1);
 								for (int j = 0; j < i; j++) {
@@ -655,7 +680,7 @@ public class Principal {
 							System.out.print("Te ha tocado ponerte en grupo con : ");
 						for (int i = 0; i < dos; i++) {
 							for (int j = 0; j < i; j++) {
-								System.out.print(nombAlumnos[grupos[i]]+ " y " +nombAlumnos[grupos[j]]);
+								System.out.print(nombAlumnos[grupos[i]]+ " y " +nombAlumnos[grupos[j]]+".");
 							}
 							
 						}
@@ -664,22 +689,22 @@ public class Principal {
 							break;
 							
 						case 4:
-							grupos[uno]=num.nextInt(numAlumnos-1+1)+1;
+							grupos[uno]=num.nextInt((numAlumnos-1)+1);
 							
 							for (int i = 0; i < nombAlumnos.length; i++) {
-								grupos[i]=num.nextInt(numAlumnos-1+1)+1;
+								grupos[i]=num.nextInt((numAlumnos-1)+1);
 								for (int j = 0; j < i; j++) {
 									if(grupos[i]==grupos[j]){
 										i--;
+								}
 									}
 								}
-							}
 								
 							
 							System.out.print("Te ha tocado ponerte en grupo con : ");
 						for (int i = 0; i < dos; i++) {
 							for (int j = 0; j < i; j++) {
-									System.out.print(nombAlumnos[grupos[i]]+ ", " +nombAlumnos[grupos[j]]+ " y "+ nombAlumnos[grupos[i+1]]); 
+									System.out.print(nombAlumnos[grupos[i]]+ ", " +nombAlumnos[grupos[j]]+ " y "+ nombAlumnos[grupos[i+1]]+"."); 
 							}
 							
 						}
@@ -701,6 +726,7 @@ public class Principal {
 			case 6:
 				
 				System.out.println("¿De qué asignatura quieres ver el gráfico?");
+				// -> MOSTRAR TABLA DE ASIGANTURAS
 				System.out.println(" ");
 				System.out.print("┌───────────────┬───────┐");
 				System.out.print("\n│ Asignatura\t");
@@ -846,6 +872,10 @@ public class Principal {
 				
 				break;
 			
+				default:
+					System.out.println("Opción no disponible");
+					break;
+				
 			}
 			
 		}while(menu!=0);
