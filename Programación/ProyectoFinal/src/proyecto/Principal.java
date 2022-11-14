@@ -55,7 +55,7 @@ public class Principal {
 		
 		for (int i = 0; i < grafico.length; i++) {
 			for (int j = 0; j < grafico[i].length; j++) {
-				grafico[i][j]="·";
+				grafico[i][j]="┼";
 			}
 		}
 		
@@ -76,6 +76,8 @@ public class Principal {
 			switch(menu) {
 			
 			case 1:
+				// MOSTRAR LA TABLA DE NOTAS->
+
 				System.out.println("\n");
 				for (int i = 0; i < mitad; i++) {
 					System.out.print("\t");
@@ -101,7 +103,11 @@ public class Principal {
 				System.out.print("\n\t");
 				for (int i = 0; i < tema; i++) {
 					if(i==(tema-1)) {
-						System.out.print("║Tema "+(i+1)+"║");	
+						if(i<9){
+							System.out.print("║Tema "+(i+1)+"\t║");								
+						}else {
+							System.out.print("║Tema "+(i+1)+"║");	
+						}
 					}else {
 						if(i<9){
 							System.out.print("║Tema "+(i+1)+"\t");								
@@ -123,7 +129,7 @@ public class Principal {
 					System.out.print("\n║ ");
 					System.out.print(asigName[i]+"\t");
 					for (int j = 0; j < tablaNotas[i].length; j++) {
-						System.out.print("║  "+tablaNotas[i][j]+"\t");
+						System.out.printf("║  %.2f\t",tablaNotas[i][j]);
 					}
 					if(i==(tablaNotas.length-1)){
 						System.out.print("║\n╚═══════╩");
@@ -148,6 +154,8 @@ public class Principal {
 					}	
 				}
 				System.out.println(" ");
+				// <- MOSTRAR LA TABLA DE NOTAS
+
 				break;
 			case 2:
 			
@@ -190,7 +198,11 @@ public class Principal {
 						System.out.print("\n\t");
 						for (int i = 0; i < tema; i++) {
 							if(i==(tema-1)) {
-								System.out.print("║Tema "+(i+1)+"║");	
+								if(i<9){
+									System.out.print("║Tema "+(i+1)+"\t║");								
+								}else {
+									System.out.print("║Tema "+(i+1)+"║");	
+								}	
 							}else {
 								if(i<9){
 									System.out.print("║Tema "+(i+1)+"\t");								
@@ -212,7 +224,7 @@ public class Principal {
 							System.out.print("\n║ ");
 							System.out.print(asigName[i]+"\t");
 							for (int j = 0; j < tablaNotas[i].length; j++) {
-								System.out.print("║  "+tablaNotas[i][j]+"\t");
+								System.out.printf("║  %.2f\t",tablaNotas[i][j]);
 							}
 							if(i==(tablaNotas.length-1)){
 								System.out.print("║\n╚═══════╩");
@@ -237,7 +249,7 @@ public class Principal {
 							}	
 						}
 						// <- MOSTRAR LA TABLA DE NOTAS
-						// -> 
+						// -> MOSTRAR TABLA DE ASIGANTURAS
 						System.out.println(" ");
 						System.out.println("\n\n Seleccione el número de la asignatura.\n");
 						System.out.print("┌───────────────┬───────┐");
@@ -256,6 +268,7 @@ public class Principal {
 							}
 						}
 						System.out.println(" ");
+						// -> MOSTRAR TABLA DE ASIGNATURAS
 						fil=Leer.datoInt();
 						System.out.println("Selecciona una unidad del 1 al "+(tema)+".");
 						col=Leer.datoInt();
@@ -275,14 +288,12 @@ public class Principal {
 						break;
 						
 					case 2:
-						System.out.println("Por favor, selecciona un tema");
-						for (int i = 0; i <tema; i++) {
-							System.out.println("Tema "+(i+1)+"\t");	
-						}
-						
-						System.out.println(" ");
+						System.out.println("Selecciona una unidad del 1 al "+(tema)+".");
 						col=Leer.datoInt();
-						
+						while(col>tema|col<0) {
+							System.out.println("Número inválido, recuerda que los temas son del 1 al "+(tema)+".");
+							col=Leer.datoInt();
+						}						
 						for (int i = 0; i<asigName.length;i++) {
 							System.out.println("Seleccione una nota para "+asigName[i]);
 							tablaNotas[i][col-1]=Leer.datoDouble();
@@ -293,26 +304,117 @@ public class Principal {
 							}
 							
 							}
-						System.out.println("1.- Para añadir otra nota.");
-						System.out.println("0.- Para salir.");
-						salir=Leer.datoInt();
+						
+						// MOSTRAR LA TABLA DE NOTAS->
+						System.out.println("\n");
+						for (int i = 0; i < mitad; i++) {
+							System.out.print("\t");
+						}
+						if(iftema!=0) {
+							System.out.print("     ");
+						}else {
+							System.out.print("\t");
+						}
+						System.out.println(curso);
+						System.out.print("\n");
+						for (int i = 0; i < tema; i++) {
+							if (i==0) {
+								System.out.print("\t╔═══════╦");
+							}else {
+								if(i==(tema-1)) {
+									System.out.print("═══════╗");
+								}else {							
+									System.out.print("═══════╦");
+								}						
+							}									
+						}
+						System.out.print("\n\t");
+						for (int i = 0; i < tema; i++) {
+							if(i==(tema-1)) {
+								if(i<9){
+									System.out.print("║Tema "+(i+1)+"\t║");								
+								}else {
+									System.out.print("║Tema "+(i+1)+"║");	
+								}	
+							}else {
+								if(i<9){
+									System.out.print("║Tema "+(i+1)+"\t");								
+								}else {
+									System.out.print("║Tema "+(i+1));	
+								}						
+							}
+						}
+						System.out.print("\n╔═══════╬");
+						for (int i = 0; i < tema; i++) {
+							if(i==(tema-1)) {
+								System.out.print("═══════╣");
+							}else {
+								System.out.print("═══════╬");
+							}
+						}
+						
+						for (int i = 0; i < tablaNotas.length; i++) {
+							System.out.print("\n║ ");
+							System.out.print(asigName[i]+"\t");
+							for (int j = 0; j < tablaNotas[i].length; j++) {
+								System.out.printf("║  %.2f\t",tablaNotas[i][j]);
+							}
+							if(i==(tablaNotas.length-1)){
+								System.out.print("║\n╚═══════╩");
+							}else {
+								System.out.print("║\n╠═══════╬");						
+							}
+							
+							for (int j = 0; j < tablaNotas[i].length; j++) {
+								if(i==(tablaNotas.length-1)) {						
+									if(j==(tablaNotas[i].length-1)) {
+										System.out.print("═══════╝");
+									}else {
+										System.out.print("═══════╩");								
+									}	
+								}else {							
+									if(j==(tablaNotas[i].length-1)) {
+										System.out.print("═══════╣");
+									}else {
+										System.out.print("═══════╬");		
+									}
+								}
+							}	
+						}
+						// <- MOSTRAR LA TABLA DE NOTAS
+						
 						break;
 						
 					case 3:
-						System.out.println("Por favor, seleccione una asignatura.");
+						// -> MOSTRAR TABLA DE ASIGANTURAS
+						System.out.println(" ");
+						System.out.println("\n\n Seleccione el número de la asignatura.\n");
+						System.out.print("┌───────────────┬───────┐");
+						System.out.print("\n│ Asignatura\t");
+						System.out.println("│Número\t│");
+						System.out.println("├───────────────┼───────┤");
+
 						for (int i = 0; i < asigName.length; i++) {
-							System.out.println((i+1)+".- "+asigName[i]);
+							System.out.print(("│ ")+asigName[i]+"\t\t│");
+							System.out.println(" "+(i+1)+"\t│");
+							if(i==(asigName.length-1)) {
+								System.out.println("└───────────────┴───────┘");
+							}else {
+								System.out.println("├───────────────┼───────┤");
+
+							}
 						}
 						System.out.println(" ");
+						// -> MOSTRAR TABLA DE ASIGNATURAS
 						fil=Leer.datoInt();
 						
 						
 						for (int i = 0; i < tema; i++) {
-							System.out.println("Seleccione una nota para el tema: "+(i+1));
+							System.out.print("Seleccione una nota para la UD"+(i+1)+" :");
 							tablaNotas[fil-1][i]=Leer.datoDouble();
 							while(tablaNotas[fil-1][i]>10|tablaNotas[fil-1][i]<0){
 								System.out.println("La nota introducida debe ser entre 0 y 10");
-								System.out.println("Seleccione una nota para el tema: "+(i+1));
+								System.out.print("Seleccione una nota para la UD"+(i+1)+" :");
 								tablaNotas[fil-1][i]=Leer.datoDouble();
 									
 							}
@@ -325,14 +427,24 @@ public class Principal {
 			case 5:
 				
 				System.out.println("¿De qué asignatura quieres ver el gráfico?");
-				System.out.print("\nAsignatura\t\t");
-				System.out.println("Número");
+				System.out.println(" ");
+				System.out.print("┌───────────────┬───────┐");
+				System.out.print("\n│ Asignatura\t");
+				System.out.println("│Número\t│");
+				System.out.println("├───────────────┼───────┤");
+
 				for (int i = 0; i < asigName.length; i++) {
-					System.out.print(asigName[i]+"\t");
-					System.out.println((i+1));
-					
+					System.out.print(("│ ")+asigName[i]+"\t\t│");
+					System.out.println(" "+(i+1)+"\t│");
+					if(i==(asigName.length-1)) {
+						System.out.println("└───────────────┴───────┘");
+					}else {
+						System.out.println("├───────────────┼───────┤");
+
+					}
 				}
 				System.out.println(" ");
+
 				numAsig=Leer.datoInt();
 				for (int i = 0; i < grafico.length ; i++) {
 					
@@ -345,239 +457,55 @@ public class Principal {
 						switch(notaGraf[j]) {
 						
 						case 10:
-							if(j==0) {
+					
+							grafico[puntos-10][j]="█";
 								
-								grafico[puntos-10][j]="¯¯";
-		
-							}else {
-								if(notaGraf[j]<notaGraf[j-1]){
-									
-									grafico[puntos-10][j]="\\";
-									
-								}
-								if(notaGraf[j]==notaGraf[j-1]){
-									
-									grafico[puntos-10][j]="¯¯";
-									
-								}
-								
-							}
 							break;
 						case 9:
-							if(j==0) {
-								
-								grafico[puntos-9][j]="/";
-	
-							}else {
-								if(notaGraf[j]<notaGraf[j-1]){
-									
-									grafico[puntos-9][j]="\\";
-									
-								}
-								if(notaGraf[j]>notaGraf[j-1]){
-									
-									grafico[puntos-9][j]="/";
-									
-								}
-								if(notaGraf[j]==notaGraf[j-1]){
-									
-									grafico[puntos-9][j]="¯¯";
-									
-								}
-								
-							}
+							
+							grafico[puntos-9][j]="█";
+
 							break;
 						case 8:
-							if(j==0) {
 								
-								grafico[puntos-8][j]="/";
+							grafico[puntos-8][j]="█";
 
-							}
-							else {
-								if(notaGraf[j]<notaGraf[j-1]){
-									
-									grafico[puntos-8][j]="\\";
-									
-								}
-								if(notaGraf[j]>notaGraf[j-1]){
-									
-									grafico[puntos-8][j]="/";
-									
-								}
-								if(notaGraf[j]==notaGraf[j-1]){
-									
-									grafico[puntos-8][j]="¯¯";
-									
-								}
-								
-							}
 							break;
 						case 7:
-							if(j==0) {
 								
-								grafico[puntos-7][j]="/";
+							grafico[puntos-7][j]="█";
 
-							}else {
-								if(notaGraf[j]<notaGraf[j-1]){
-									
-									grafico[puntos-7][j]="\\";
-									
-								}
-								if(notaGraf[j]>notaGraf[j-1]){
-									
-									grafico[puntos-7][j]="/";
-									
-								}
-								if(notaGraf[j]==notaGraf[j-1]){
-									
-									grafico[puntos-7][j]="¯¯";
-									
-								}
-								
-							}
 							break;
 						case 6:
-							if(j==0) {
 								
-								grafico[puntos-6][j]="/";
+							grafico[puntos-6][j]="█";
 
-							}else {
-								if(notaGraf[j]<notaGraf[j-1]){
-									
-									grafico[puntos-6][j]="\\";
-									
-								}
-								if(notaGraf[j]>notaGraf[j-1]){
-									
-									grafico[puntos-6][j]="/";
-									
-								}
-								if(notaGraf[j]==notaGraf[j-1]){
-									
-									grafico[puntos-6][j]="¯¯";
-									
-								}
-								
-							}
 							break;
 						case 5:
-							if(j==0) {
-								
-								grafico[puntos-5][j]="/";
-
-							}else {
-								if(notaGraf[j]<notaGraf[j-1]){
-									
-									grafico[puntos-5][j]="\\";
-									
-								}
-								if(notaGraf[j]>notaGraf[j-1]){
-									
-									grafico[puntos-5][j]="/";
-									
-								}
-								if(notaGraf[j]==notaGraf[j-1]){
-									
-									grafico[puntos-5][j]="¯¯";
-									
-								}
-								
-							}
+							
+							grafico[puntos-5][j]="█";	
+							
 							break;
 						case 4:
-							if(j==0) {
 								
-								grafico[puntos-4][j]="/";
+							grafico[puntos-4][j]="█";
 
-							}else {
-								if(notaGraf[j]<notaGraf[j-1]){
-									
-									grafico[puntos-4][j]="\\";
-									
-								}
-								if(notaGraf[j]>notaGraf[j-1]){
-									
-									grafico[puntos-4][j]="/";
-									
-								}
-								if(notaGraf[j]==notaGraf[j-1]){
-									
-									grafico[puntos-4][j]="¯¯";
-									
-								}
-								
-							}
 							break;
 						case 3:
-							if(j==0) {
+							
+							grafico[puntos-3][j]="█";
 								
-								grafico[puntos-3][j]="/";
-								
-							}else {
-								if(notaGraf[j]<notaGraf[j-1]){
-									
-									grafico[puntos-3][j]="\\";
-									
-								}
-								if(notaGraf[j]>notaGraf[j-1]){
-									
-									grafico[puntos-3][j]="/";
-									
-								}
-								if(notaGraf[j]==notaGraf[j-1]){
-									
-									grafico[puntos-3][j]="¯¯";
-									
-								}
-								
-							}
 							break;
 						case 2:
-							if(j==0) {
 								
-								grafico[puntos-2][j]="/";
+							grafico[puntos-2][j]="█";
 								
-							}else {
-								if(notaGraf[j]<notaGraf[j-1]){
-									
-									grafico[puntos-2][j]="\\";
-									
-								}
-								if(notaGraf[j]>notaGraf[j-1]){
-									
-									grafico[puntos-2][j]="/";
-									
-								}
-								if(notaGraf[j]==notaGraf[j-1]){
-									
-									grafico[puntos-2][j]="¯¯";
-									
-								}
-								
-							}
 							
 							break;
 						case 1:
-							if(j==0) {
-								
-								grafico[puntos-1][j]="/";
-
-								
-							}else {
-
-								if(notaGraf[j]>notaGraf[j-1]){
-									
-									grafico[puntos-1][j]="/";
-									
-								}
-								if(notaGraf[j]==notaGraf[j-1]){
-									
-									grafico[puntos-1][j]="¯¯";
-									
-								}
-								
-							}
-							
+															
+							grafico[puntos-1][j]="█";
+					
 							break;
 						
 							
@@ -588,21 +516,58 @@ public class Principal {
 					
 					
 				}
-				
+				System.out.print("\t\t  ");
+				for (int i = 0; i < mitad; i++) {
+					System.out.print("  ");
+				}
+				if(iftema!=0) {
+					System.out.print("  ");
+				}else {
+					System.out.print(" ");
+				}
+				System.out.println(asigName[numAsig-1]);
 				for (int k = 0; k < grafico.length; k++) {
 					System.out.println();
-					System.out.print(10-k+"\t");
-					for (int k2 = 0; k2 < grafico[k].length; k2++) {
+					if(k==0) {
+						System.out.print("\t\t"+(10-k));
+					}else {
 						
-						System.out.print(grafico[k][k2]+("\t"));
-	
+						if(k==5) {
+							System.out.print("\tNotas:\t"+(10-k)+" ");
+
+						}else {
+							System.out.print("\t\t"+(10-k)+" ");
+
+						}
+
+					}
+					for (int k2 = 0; k2 < grafico[k].length; k2++) {
+
+						System.out.print("─"+grafico[k][k2]+"─");
+						
 					}	
 				}
-				System.out.println("\n");
-				System.out.print("\t");
+				
+				System.out.print("\n\t\t  ");
 				for (int i = 0; i < tema; i++) {
-					System.out.print("Tema "+(i+1)+"\t");
+					if((i+1)<10) {
+						System.out.print(" "+(i+1)+" ");
+
+					}else {
+						System.out.print(" "+(i+1)+"");
+					}
+				}				System.out.println("\n");
+				
+				System.out.print("\t\t  ");
+				for (int i = 0; i < mitad; i++) {
+					System.out.print("  ");
 				}
+				if(iftema!=0) {
+					System.out.print("  ");
+				}else {
+					System.out.print(" ");
+				}
+				System.out.println("Unidad:");
 				System.out.println("\n");
 				
 				break;
