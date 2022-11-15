@@ -1,6 +1,5 @@
 package proyecto;
 
-import java.util.Iterator;
 import java.util.Random;
 
 import utilidades.Leer;
@@ -8,7 +7,25 @@ import utilidades.Leer;
 public class Principal {
 
 	public static void main(String[] args) {
-		
+		/*Integrantes del grupo: 
+
+	Roberto Rebolledo Naharro (Scrum Master).
+	Manuel Molina García (Relaciones Públicas).
+	Marisa Lozano Macías (Secretaria).
+	
+	Seguimiento:
+	En la primera reunión decidimos, qué iba a realizar el programa, y cómo sería la estructura. Decidimos que nuestro programa iba a realizar un control de notas del alumno, control de las faltas, asignará aleatoriamente compañeros con los que realizar un trabajo, también el usuario tiene la posibilidad de ver la evolución de las notas a través de una gráfica.
+	
+	En una reunión posterior hicimos el reparto de tareas:
+	La primera parte comprende preguntarle al usuario datos y leerlos por teclado, y hacer los menús para ver las notas y registrarlas, además de colaborar con el Scrum Master en tareas de diseño. Realizada por Marisa
+	La segunda parte comprende el recuento de faltas y generar los aleatorios para que empareje a los alumnos. Realizada por Manuel
+	La tercera parte comprende la realización de los gráficos y del título. Realizada por Roberto.
+	
+	El día 11/11/22: Roberto entrega su parte del trabajo, además une los códigos y se encarga de tareas de diseño para que el interfaz del programa quede bonito, Marisa entrega su parte de código, además ayuda a Roberto con las tareas de diseño, Manuel, tiene terminada la parte del código que se refiere a las faltas, posteriormente se toma la decisión de modificar esa parte ya que, Manuel lo tenía configurado con tres arrays unidimensionales, y está intentando hacer esa parte con un array unidimensional, y otro bidimensional.
+	
+	El día 13/11/22: Manuel entrega su parte del programa.
+	El día 14/11/22: Iniciamos entre todos la unión de los códigos y terminamos la depuración de errores. También terminamos la parte de diseño gráfico. 
+	*/
 		double[][] tablaNotas;
 		int [][] tablaFaltas;
 		String [][] grafico;
@@ -662,7 +679,7 @@ public class Principal {
 							break;
 						case 2:
 							pareja= num.nextInt((numAlumnos-1)+1);
-							System.out.println("Te ha tocado ponerte en pareja con "+nombAlumnos[pareja]);
+							System.out.println("Te ha tocado ponerte en pareja con "+nombAlumnos[pareja]+".");
 							System.out.println("\n");
 							
 							break;
@@ -875,11 +892,12 @@ public class Principal {
 				default:
 					System.out.println("Opción no disponible");
 					break;
-				
+				case 0:
+					break;
 			}
 			
 		}while(menu!=0);
-		
+		System.out.println("Gracias por usar este programa.");
 	}
 		
 }

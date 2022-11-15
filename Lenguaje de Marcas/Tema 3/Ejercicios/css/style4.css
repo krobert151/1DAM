@@ -7,15 +7,36 @@ body{
 }
 @font-face {
     font-family:"rimas1" ;
-    src: url("../fonts/Poems\ &\ Pens\ Bold\ Italic.ttf");
+    src: url("../fonts/KGPrimaryItalics.ttf");
 }
-h1,h2{
-
-    color: rgb(19, 0, 0);
-    
+@font-face {
+    font-family:"rimas2" ;
+    src: url("../fonts/TheStudentsTeacher-Regular.ttf");
+}
+@font-face {
+    font-family:"rimas3" ;
+    src: url("../fonts/Philosopher-Regular.ttf");
+}
+@font-face {
+    font-family:"titulo";
+    src: url("../fonts/Octobre-Variable.ttf");
+}
+img{
     margin-left: 5%;
-    
-    font-family:'poema1';
+}
+h1{
+
+    color:aliceblue;
+    margin-left: 5%;
+    font-family: titulo ;
+    font-size: 400%;
+}
+h2{
+
+    color:aliceblue;
+    margin-left: 5%;
+    font-family: titulo ;
+    font-size: 200%;
 
 }
 p.rimas1{
@@ -25,7 +46,33 @@ p.rimas1{
     font-family:'rimas1';
     font-size: 150%;
     font-weight: bolder;
+    color: aliceblue;
 
+}
+p.rimas2{
+    width: 50%;
+    margin-left: 5%;
+    text-align: justify ;
+    font-family:'rimas2';
+    font-size: 150%;
+    font-weight: bolder;
+    color: aliceblue;
+
+}
+p.rimas3{
+    width: 50%;
+    margin-left: 5%;
+    text-align: justify ;
+    font-family:'rimas3';
+    font-size: 150%;
+    font-weight: bolder;
+    color: aliceblue;
+
+}
+p.bequer{
+    color:aliceblue;
+    margin-left: 5%;
+    font-family: titulo ;
 
 }
 
