@@ -1,0 +1,27 @@
+.titulo{
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    }
+.subtitulo{
+    text-align: justify;
+    text-align: center;
+    font-weight: bold;
+    color: aliceblue;
+    }
+p{
+    font-size: 18px;
+}
+body{
+
+    background-color: rgb(27, 27, 27);
+    color: rgb(188, 188, 189);
+
+}
+.centrado{
+
+    text-align: center;
+}
+.autor{
+    text-transform: lowercase;
+}

@@ -1,7 +1,7 @@
 package ejercicio1;
 
 public class Circulo {
-	//atributo
+	//atributo "Nunca se le da un valor a los atributos en las clases"
 	double radio;
 	//constructores
 	public Circulo(double radio){

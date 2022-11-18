@@ -43,7 +43,7 @@ public class Principal {
 				desde=Leer.datoInt();
 				
 				for (int i = 0; i < cal.length; i++) {
-					cal[i]=r.nextInt((hasta-desde)+desde);
+					cal[i]=r.nextInt(hasta-desde+1)+desde;
 				}
 				break;
 
