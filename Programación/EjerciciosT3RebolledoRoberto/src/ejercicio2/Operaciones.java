@@ -2,6 +2,7 @@ package ejercicio2;
 
 public class Operaciones {
 	int num;
+	boolean boo;
 	
 	public Operaciones (int num) {
 		
@@ -13,30 +14,42 @@ public class Operaciones {
 	}
 	public boolean comprobarPar (int num) {
 		int dos=2,div;
-		boolean par;
 		div=num%dos;
 		if(div==0) {
-			par=true;
+			return true;
 		}else {
-			par=false;
+			return false;
 		}
-		return par;
+		 
 	}
-	public String comprobarPos (int num) {
+	public boolean comprobarPos (int num) {
 		String resultado="0";
 		int cero=0;
 		
 			if(num>=cero) {
-				resultado="Positivo";			
-
+				return true;			
 			}else{
-				resultado="Negativo";			
-
+				return false;			
 			}
 			
-		
-		return resultado;
 				
 	}
+	public void imprimirPar (boolean boo) {
+		
+		if(boo) {
+			System.out.println("Par");
+		}else {
+			System.out.println("Impar");
+		}
+		
+	}
+	public void imprimirPos (boolean boo) {
+		if(boo) {
+			System.out.println("Positivo");
+		}else {
+			System.out.println("Negativo");
+		}
+	}
+	
 	
 }
