@@ -11,7 +11,7 @@ public class Pincipal {
 		a los "chinos", del 1 al 49 para el sorteo de primitiva... Crear una clase principal donde se prueben todos
 		los métodos pidiendo los datos necesarios para cada generación*/
 
-		int num,menu;
+		int num1,num2,num,menu,numQuiniela,select,numChinos,numPrimitiva;
 		Generadora Gen1=new Generadora();
 		do {
 			System.out.println("1.-Quiniela");
@@ -22,7 +22,7 @@ public class Pincipal {
 			switch(menu) {
 			
 			case 1:
-				System.out.println("Pulse 1 para apostar por el equipo local.");
+				System.out.println("\nPulse 1 para apostar por el equipo local.");
 				System.out.println("Pulse 2 para apostar por un empate.");
 				System.out.println("Pulse 3 para apostar por el equipo visitante.");
 				num=Leer.datoInt();
@@ -30,25 +30,58 @@ public class Pincipal {
 					System.out.println("No está disponible esa opción vuelva a repetir");
 					num=Leer.datoInt();
 				}
-				
-				Gen1.mostrarQuiniela(Gen1.comprobarQuiniela(num, Gen1.hecharQuiniela()));				
-				Gen1.resultadoQuiniela();
+				numQuiniela=Gen1.hecharQuiniela();
+				Gen1.mostrarQuiniela(Gen1.comprobarQuiniela(num,numQuiniela));				
+				Gen1.mostrarResultadoQuiniela(numQuiniela);
 				
 				break;
 			
 			case 2:
-				
-				System.out.println("Seleccione un número del 1 al 10");
-				num=Leer.datoInt();
-				while(num>0|num<10) {
-					System.out.println("Ese número noe stá disponible, seleccione un número del 1 al 10.");
-					num=Leer.datoInt();
+				System.out.println("Jugador nº1 Seleccione 1 para Par o 2 para None");
+				select=Leer.datoInt();
+				if(select==1) {
+					System.out.println("El jugador 1 ha elejido Par, por lo tanto al 2 le toca None.");
+					num1=Gen1.hecharPares();	
+					num2=Gen1.hecharPares();	
+
+				}else {
+					System.out.println("El jugador 1 ha elejido None, por lo tanto al 2 le toca Par.");
+
+					num1=Gen1.hecharPares();	
+					num2=Gen1.hecharPares();;
 				}
 				
-				
+				num=Gen1.sumar2Num(num1, num2);
+				System.out.print(num+" --> ");
+				Gen1.mostrarPares(Gen1.comprobarPares(num));				
 				
 				break;
 			
+			case 3:
+				System.out.println("Seleccione un número del 1 al 3.");
+				num=Leer.datoInt();
+				while(num >3| num<1) {
+					System.out.println("No está disponible esa opción vuelva a repetir");
+					num=Leer.datoInt();
+				}
+				numChinos=Gen1.hecharChinos();
+				System.out.print("El número que ha salido es el "+numChinos+", ");
+				Gen1.mostrarChinos(Gen1.comprobarChinos(num, numChinos));	
+				
+				break;
+			
+			case 4:
+				System.out.println("Selecciona un número del 1-49");
+				num=Leer.datoInt();
+				while(num<0|num>49) {
+					System.out.println("Vuelva a repetir");
+					num=Leer.datoInt();
+				}
+				numPrimitiva=Gen1.hecharPrimitiva();
+				System.out.println("El resultado de la primitiva es "+numPrimitiva);
+				Gen1.resultadoPrimitiva(Gen1.comprobarPrimitiva(num, numPrimitiva));
+				break;
+				
 			}
 		
 		

@@ -4,20 +4,19 @@ import java.util.Random;
 
 public class Generadora {
 	
-	int numQuiniela,numPar;
 	
 	public int hecharQuiniela () {
 	
 		int desde=1, hasta=3;
 		Random r= new Random (System.nanoTime());
 		
-		numQuiniela=r.nextInt(hasta-desde+1)+desde;	
-		return  numQuiniela;
+		return r.nextInt(hasta-desde+1)+desde;	
+		  
 		 
 	}
-	public void resultadoQuiniela() {
+	public void mostrarResultadoQuiniela( int num) {
 		
-		switch(numQuiniela) {
+		switch(num) {
 		
 			case 1:
 				
@@ -56,16 +55,19 @@ public class Generadora {
 		
 		
 	}
-	
-	
+		
 	public int hecharPares () {
 		
-		int desde=1, hasta= 10;
+		int desde=1, hasta= 5;
 		Random r=new Random (System.nanoTime());
 		
-		numPar=r.nextInt(hasta-desde+1)+desde;
-		return numPar;
+		return r.nextInt(hasta-desde+1)+desde;
+		 
 		
+	}
+	public int sumar2Num (int num1, int num2) {
+		
+		return num1+num2;
 	}
 	public boolean comprobarPares(int num) {
 		if(num%2==0) {
@@ -78,10 +80,10 @@ public class Generadora {
 		
 		if(boo) {
 			
-			System.out.println(numPar+" es Par");
+			System.out.println("Ha salido Par!!");
 			
 		}else {
-			System.out.println(numPar+" es impar");
+			System.out.println("Ha salido None!!");
 
 		}
 		
@@ -96,12 +98,52 @@ public class Generadora {
 		return  r.nextInt(hasta-desde+1)+desde;	
 		
 	}
+	public boolean comprobarChinos (int num, int chinos) {
+		
+		if(chinos==num) {
+			
+			return true;
+		}else {
+			return false;
+		}		
+	}
+	public void mostrarChinos (boolean boo) {
+		
+		if(boo) {
+			System.out.println("Has acertado");
+		}else {
+			System.out.println("Has fracasado");
+		}
+		
+	}
+		
 	public int hecharPrimitiva() {
 		
 		int desde=1, hasta=49;
 		Random r=new Random (System.nanoTime());
 		
 		return r.nextInt(hasta-desde+1)+desde;
+		
+	}
+	public boolean comprobarPrimitiva (int num, int primitiva) {
+		
+		if(num==primitiva) {
+			
+			return true;
+		}else {
+			return false;
+		}
+		
+	}
+	public void resultadoPrimitiva (boolean boo) {
+		
+		if(boo) {
+			
+			System.out.println("Enhorabuena has ganado la Primitiva!!!");
+			
+		}else {
+			System.out.println("Fracaso absoluto.");
+		}
 		
 	}
 	
