@@ -11,7 +11,6 @@ public class Generadora {
 		Random r= new Random (System.nanoTime());
 		
 		return r.nextInt(hasta-desde+1)+desde;	
-		  
 		 
 	}
 	public void mostrarResultadoQuiniela( int num) {

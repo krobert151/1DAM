@@ -2,7 +2,9 @@ package ejercicio1;
 
 public class Circulo {
 	//atributo "Nunca se le da un valor a los atributos en las clases"
-	double radio;
+	private double radio;
+	
+
 	//constructores
 	public Circulo(double radio){
 		this.radio=radio;
@@ -10,11 +12,19 @@ public class Circulo {
 	public Circulo() {
 		
 	}
-	//Métodos
-	public double calcularArea (double cosa) {
-		int exp=2;
-		double resultado=0.00;
-		resultado=Math.PI*Math.pow(cosa, exp);
-		return  resultado;
+	
+	//getter and setter
+	public double getRadio() {
+		return radio;
 	}
+	public void setRadio(double radio) {
+		this.radio = radio;
+	}
+	
+	//Métodos
+	public double calcularArea () {
+		int exp=2;
+		return  Math.PI*Math.pow(radio, exp);
+	}
+	
 }

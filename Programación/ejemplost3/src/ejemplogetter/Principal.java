@@ -22,12 +22,11 @@ public class Principal {
 		System.out.println(prod.getPrecioB());
 		
 		
-		System.out.println("Cabia el precio");
+		System.out.println("Cambia el precio");
 		precioB=Leer.datoDouble();
 		prod.setPrecioB(precioB);
 		System.out.println(prod.getPrecioB());
-		
-		
+		System.out.println(prod);
 		
 	}
 
