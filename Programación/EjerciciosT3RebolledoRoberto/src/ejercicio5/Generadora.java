@@ -116,32 +116,111 @@ public class Generadora {
 		
 	}
 		
-	public int hecharPrimitiva() {
+	public int [] hecharPrimitiva() {
 		
 		int desde=1, hasta=49;
+		int  [] numePrim= new int [6];
 		Random r=new Random (System.nanoTime());
 		
-		return r.nextInt(hasta-desde+1)+desde;
 		
-	}
-	public boolean comprobarPrimitiva (int num, int primitiva) {
+		for (int i = 0; i < numePrim.length; i++) {
+			numePrim[i]=r.nextInt(hasta-desde+1)+desde;			
+			}
 		
-		if(num==primitiva) {
-			
-			return true;
-		}else {
-			return false;
+		for (int i = 0; i < numePrim.length; i++) {
+
+			for (int j = 0; j < numePrim.length; j++) {
+				if(i==j) {
+					
+				}else {
+					
+					while(numePrim[i]==numePrim[j]) {
+						
+						numePrim[i]=r.nextInt(hasta-desde+1)+desde;	
+						
+					}
+					
+				}
+			}
 		}
 		
-	}
-	public void resultadoPrimitiva (boolean boo) {
+		return numePrim; 
 		
-		if(boo) {
+	}
+	public void mostrarPrimitiva (int  num[]) {
+		System.out.println("Números de la primitiva");
+		for (int i = 0; i < num.length; i++) {
+			System.out.print(num[i]+"  ");
+		}
+		
+		
+	}
+	public int comprobarPrimitiva (int numPer[], int numPri[]) {
+		
+		int aciertos=0;
+		
+		for (int i = 0; i < numPri.length; i++) {
 			
-			System.out.println("Enhorabuena has ganado la Primitiva!!!");
+			for (int j = 0; j < numPri.length; j++) {
+				
+				if(numPer[i]==numPri[j]) {
+					
+					aciertos++;
+					
+				}
+				
+			}
+		}
+		
+		return  aciertos;
+		
+	}
+	public void resultadoPrimitiva (int num) {
+		
+		switch(num) {
+		
+			case 0:
 			
-		}else {
-			System.out.println("Fracaso absoluto.");
+				System.out.println("Lo siento, no te ha tocado nada.");
+				
+				break;
+				
+			case 1:
+				
+				System.out.println("Has coincidido en un número, pero aún así no te llevas nadaa.");
+				
+				break;
+				
+			case 2:
+				
+				System.out.println("Has coincidido en dos números, se te devuelver el dinero de la apuesta");
+				
+				break;
+				
+			case 3:
+				
+				System.out.println("Enhorabuena has coincidio en 3 números +1000€");
+				
+				break;
+				
+			case 4:
+				
+				System.out.println("Enhorabuena has coincidio en 4 números +5000€");
+				
+				break;
+				
+			case 5:
+				
+				System.out.println("Enhorabuena has coincidio en 5 números +10000€");
+				
+				break;
+				
+			case 6:
+				
+				System.out.println("Enhorabuena has coincidio en 6 números +25000€");
+				
+				break;
+				
 		}
 		
 	}

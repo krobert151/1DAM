@@ -5,21 +5,26 @@ import utilidades.Leer;
 public class Pincipal {
 
 	public static void main(String[] args) {
+		
 		/*Crear una clase llamada Generadora sin atributos, pero con varios métodos que generen aleatoriamente
 		distintos números o resultados según las características del sorteo o para qué se vaya a usar, por ejemplo,
 		generar 1, x, 2 para una quiniela, generar par o impar para jugar a pares o nones, generar 1, 2 o 3 para jugar
 		a los "chinos", del 1 al 49 para el sorteo de primitiva... Crear una clase principal donde se prueben todos
 		los métodos pidiendo los datos necesarios para cada generación*/
-
-		int num1,num2,num,menu,numQuiniela,select,numChinos,numPrimitiva;
+		
+		
+		int [] numPrimitiva=new int [6]; 
+		int num1,num2,num,menu,numQuiniela,select,numChinos;
 		Generadora Gen1=new Generadora();
 		do {
-			System.out.println("1.-Quiniela");
+			System.out.println("\n1.-Quiniela");
 			System.out.println("2.-Pares o nones");
 			System.out.println("3.-Los chinos");
 			System.out.println("4.-La primitiva");
 			menu=Leer.datoInt();
+			
 			switch(menu) {
+			
 			
 			case 1:
 				System.out.println("\nPulse 1 para apostar por el equipo local.");
@@ -70,25 +75,21 @@ public class Pincipal {
 				
 				break;
 			
+			
 			case 4:
-				System.out.println("Selecciona un número del 1-49");
-				num=Leer.datoInt();
-				while(num<0|num>49) {
-					System.out.println("Vuelva a repetir");
-					num=Leer.datoInt();
+				System.out.println("Selecciona los 6 números de la primitiva");
+				for (int i = 0; i < numPrimitiva.length; i++) {
+					numPrimitiva[i]=Leer.datoInt();
 				}
-				numPrimitiva=Gen1.hecharPrimitiva();
-				System.out.println("El resultado de la primitiva es "+numPrimitiva);
-				Gen1.resultadoPrimitiva(Gen1.comprobarPrimitiva(num, numPrimitiva));
+				int [] resPrim = Gen1.hecharPrimitiva(); 
+				Gen1.mostrarPrimitiva(resPrim);
+				System.out.println(" ");
+				Gen1.resultadoPrimitiva(Gen1.comprobarPrimitiva(numPrimitiva, resPrim));;
 				break;
-				
 			}
-		
-		
+				
 		}while(menu!=0);
-		
-		
-		
+			
 		
 	}
 
