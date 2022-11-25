@@ -193,7 +193,7 @@ public class Generadora {
 				
 			case 2:
 				
-				System.out.println("Has coincidido en dos números, se te devuelver el dinero de la apuesta");
+				System.out.println("Has coincidido en dos números, se devuelve el dinero de la apuesta");
 				
 				break;
 				
