@@ -1,0 +1,61 @@
+body{
+    background-color:darkolivegreen;
+}
+.pagina{
+    margin: auto;
+    width: 85%;    
+    
+}
+.contenido{
+    display: flex;
+    padding: 1%;
+}
+header{
+    width: 100%;
+    text-align: center;
+    color:beige;
+    padding: 2pt;
+    background-color: rgb(106, 128, 69);
+    border-radius: 50pt;
+}
+@font-face {
+    font-family:"titulo" ;
+    src: url("../font/Minecraft\ Evenings.ttf");
+}
+h1{
+    font-family: "titulo";
+    font-size: 300%;
+    text-transform: uppercase;
+    letter-spacing: 2pt;
+}
+
+main{
+    color:beige;
+    background-color: rgb(106, 128, 69);
+    border-radius: 50pt;
+    width: 74%;
+    margin-right: 1%;
+    padding: 3%;
+
+}
+aside{
+    background-color: rgb(106, 128, 69);
+    border-radius: 50pt;
+    margin-bottom: 3%;
+    text-align: center;
+    
+}
+.derecha{
+    width: 25%;
+
+}
+.fotoClamido,.fotoPubli{
+    width: 90%; 
+    padding: 5%;
+    border-radius: 50pt;
+}
+/*Comentar a Rafa*/
+.publitext{
+    padding-top: 3%;
+    color:beige;
+}
