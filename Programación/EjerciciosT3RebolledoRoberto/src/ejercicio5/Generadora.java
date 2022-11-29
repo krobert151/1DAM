@@ -5,7 +5,7 @@ import java.util.Random;
 public class Generadora {
 	
 	
-	public int hecharQuiniela () {
+	public int hacerQuiniela () {
 	
 		int desde=1, hasta=3;
 		Random r= new Random (System.nanoTime());
@@ -55,7 +55,7 @@ public class Generadora {
 		
 	}
 		
-	public int hecharPares () {
+	public int hacerPares () {
 		
 		int desde=1, hasta= 5;
 		Random r=new Random (System.nanoTime());
@@ -89,7 +89,7 @@ public class Generadora {
 		
 	}
 	
-	public int hecharChinos () {
+	public int hacerChinos () {
 		
 		int desde=1, hasta=3;
 		Random r= new Random (System.nanoTime());
@@ -116,7 +116,7 @@ public class Generadora {
 		
 	}
 		
-	public int [] hecharPrimitiva() {
+	public int [] hacerPrimitiva() {
 		
 		int desde=1, hasta=49;
 		int  [] numePrim= new int [6];

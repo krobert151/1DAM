@@ -35,7 +35,7 @@ public class Pincipal {
 					System.out.println("No está disponible esa opción vuelva a repetir");
 					num=Leer.datoInt();
 				}
-				numQuiniela=Gen1.hecharQuiniela();
+				numQuiniela=Gen1.hacerQuiniela();
 				Gen1.mostrarQuiniela(Gen1.comprobarQuiniela(num,numQuiniela));				
 				Gen1.mostrarResultadoQuiniela(numQuiniela);
 				
@@ -46,14 +46,14 @@ public class Pincipal {
 				select=Leer.datoInt();
 				if(select==1) {
 					System.out.println("El jugador 1 ha elejido Par, por lo tanto al 2 le toca None.");
-					num1=Gen1.hecharPares();	
-					num2=Gen1.hecharPares();	
+					num1=Gen1.hacerPares();	
+					num2=Gen1.hacerPares();	
 
 				}else {
 					System.out.println("El jugador 1 ha elejido None, por lo tanto al 2 le toca Par.");
 
-					num1=Gen1.hecharPares();	
-					num2=Gen1.hecharPares();;
+					num1=Gen1.hacerPares();	
+					num2=Gen1.hacerPares();;
 				}
 				
 				num=Gen1.sumar2Num(num1, num2);
@@ -69,7 +69,7 @@ public class Pincipal {
 					System.out.println("No está disponible esa opción vuelva a repetir");
 					num=Leer.datoInt();
 				}
-				numChinos=Gen1.hecharChinos();
+				numChinos=Gen1.hacerChinos();
 				System.out.print("El número que ha salido es el "+numChinos+", ");
 				Gen1.mostrarChinos(Gen1.comprobarChinos(num, numChinos));	
 				
@@ -81,7 +81,7 @@ public class Pincipal {
 				for (int i = 0; i < numPrimitiva.length; i++) {
 					numPrimitiva[i]=Leer.datoInt();
 				}
-				int [] resPrim = Gen1.hecharPrimitiva(); 
+				int [] resPrim = Gen1.hacerPrimitiva(); 
 				Gen1.mostrarPrimitiva(resPrim);
 				System.out.println(" ");
 				Gen1.resultadoPrimitiva(Gen1.comprobarPrimitiva(numPrimitiva, resPrim));;

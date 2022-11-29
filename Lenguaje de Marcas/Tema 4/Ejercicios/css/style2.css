@@ -1,0 +1,18 @@
+.cartel{
+    display: block;
+    width: 800px;
+    height: 565px;
+    background-image: url("../img/fondo_jovenes.png"),url("../img/fondo_trama.png");
+    background-repeat: no-repeat,no-repeat;
+    background-position: bottom;
+    background-size: 85%,cover;
+    border-radius: 50pt;
+    font-family: "Kristen ITC","Berlin Sans FB", 'Arial';
+    color: aliceblue;
+    font-size: 35pt;
+    font-variant: small-caps;
+    padding-top: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+}

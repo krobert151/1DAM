@@ -6,7 +6,9 @@ public class Principal {
 
 	public static void main(String[] args) {
 		int num;
-		/*Crear un programa que simule el juego de cara o cruz. Para ello, se usarán los siguientes métodos:
+		Juego uno;
+		uno=new Juego();
+		/*Crear un progrma que simule el juego de cara o cruz. Para ello, se usarán los siguientes métodos:
 		• Método que simule el lanzamiento de la moneda y resultado.
 		• Método para comprobar ganador, se le pasará el número elegido por el jugador y dentro se generará
 			el aleatorio llamando al método anterior. Devuelve true si son iguales o false si no.
@@ -23,7 +25,9 @@ public class Principal {
 			System.out.println("Número no valido");
 			num=Leer.datoInt();
 		}
-		
+		uno.lanzarMoneda();
+		uno.mostrarGanador(uno.comprobarGanador(num));
+		System.out.println(uno.getLadoMoneda());
 		
 		
 		
