@@ -27,7 +27,7 @@ public class Principal {
 		}
 		uno.lanzarMoneda();
 		uno.mostrarGanador(uno.comprobarGanador(num));
-		System.out.println(uno.getLadoMoneda());
+		System.out.println(uno.getLadoMoneda());	
 		
 		
 		

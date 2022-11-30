@@ -1,0 +1,153 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+}
+.menuTop{
+    
+    display: flex;
+    position: absolute;
+    height: 50px;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: white;
+    justify-content: flex-start;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.navTresLineas{
+    display: flex;
+    background-color: rgb(225, 224, 224);
+    height: 80%;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.inicio{
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.idioma{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: rgb(153, 153, 153);
+    font-size: 90%;
+    width: 20%;
+
+}
+.navright{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    align-items: center;
+}
+.navicon{
+    height: 33%;
+    margin-right: 15px;
+
+}
+.usericon{
+    width: 50px;
+    margin-right: 15px;
+}
+.nombre{
+    color: #1177d1;
+}
+.flexer1{
+    display: flex;
+    position: relative;
+    margin-top: 45px;
+    padding-right: 20px;
+}
+.navdrawer{
+    width: 350px;
+    background-color: rgb(225, 224, 224);
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    flex-direction: column;
+    height: 610px;
+    padding-top: 20px;
+    padding-bottom:20px;
+    
+}
+
+.areaspersonales{
+    background-color: white;
+    width: 225px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    border: 1px solid rgb(153, 153, 153);
+}
+header{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(225, 224, 224);
+    width: 100%;
+    height: 100px;
+    align-content: center;
+    padding-left:20px ;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+    
+}
+.cont1{
+    padding-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 100%;
+}
+.navspan{
+    color:#1177d1;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(225, 224, 224);
+    padding-top: 10px;
+    padding-left: 20px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.nombremodulo{
+    display: block;
+    width: 100%;
+    padding-bottom: 20pt;
+    color: #1177d1;
+    font-size: 30px;
+}
+.profesor{
+    display: block;
+    width: 40%;
+}
+.infomodulo{
+    display: block;
+    width: 40%;
+}
+.modulo{
+    display: flex;
+    padding-bottom: 20px;
+}
+footer{
+    margin-top: 10px;
+    background-color: #343a40;
+    width: 100%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    color:white;
+    font-size: 80%;
+}
