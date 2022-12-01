@@ -1,0 +1,60 @@
+body{
+    background-color:cornflowerblue;    
+}
+main{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+image{
+    display: block;
+}
+div{
+    display: flex;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    border: black 1px solid;
+    border-radius: 25pt;
+    margin: 20pt ;
+    color: red;
+    justify-content:center;
+    align-items: flex-end;
+    padding-bottom: 5px;
+    background-size: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: cover;
+    font-size: 20px;
+    
+}
+.clamidosaurio{
+    background-image: url("../img/clamidosaurio1.png");
+}
+.tposebicho{
+    background-image: url("../img/shshshhshsh.png");
+}
+.gallipato{
+    background-image: url("../img/gallipato.png");
+}
+.basilisco{
+    background-image: url("../img/basilisco.png");
+}
+.geko{
+    background-image: url("../img/gekoleopardo.png");
+}
+.phelsuma{
+    background-image: url("../img/phelsuma.png");
+}
+.tortugacaiman{
+    background-image: url("../img/tortugacaiman.png");
+}
+.cuervo{
+    background-image: url("../img/cuervo.png");
+}
+.alacran{
+    background-image: url("../img/alacran.png");
+}
+.caiman{
+    background-image: url("../img/caimananteojos.png");
+}

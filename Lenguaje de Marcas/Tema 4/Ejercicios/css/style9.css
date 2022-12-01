@@ -1,0 +1,12 @@
+.slider{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-type:mandatory;
+}
+.slider img {
+    
+    width: 100%;
+    object-fit: cover;
+    
+  }
