@@ -1,8 +1,14 @@
 
-div{
+.anteriorsiguiente{
     background-color: rgb(209, 209, 209);
     font-size: 200%;
-    width: 80%;
-    
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+
+       
 
 }
