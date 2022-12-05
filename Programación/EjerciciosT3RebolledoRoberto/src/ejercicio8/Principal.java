@@ -21,8 +21,6 @@ public class Principal {
 		sort1.generarLoteria();
 		sort1.mostrarGanador(sort1.comprobarLoteria(num));
 		
-		
-		
 	}	
 
 }
