@@ -10,7 +10,7 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     position:absolute;
     width: 100%;
     color: white;
@@ -20,7 +20,7 @@ body{
 }
 
 @font-face {
-    font-family:'title' ;
+    font-family:'title';
     src: url("../fonts/Plane\ Crash.ttf");
 }
 .portada{
@@ -33,7 +33,7 @@ body{
 .portada img{
     display: block;
     border: rgb(0, 0, 0) 1px solid;
-    width: 800px;
+    height: 80%;
     border-radius: 50%;
 }
 .portada a :hover{
@@ -96,7 +96,6 @@ main{
 }
 hr {
     width: 100%;
-
 }
 h2{
     font-family: 'title';
@@ -119,7 +118,7 @@ h2{
 .tituloindex ul{
     display: flex;
     flex-direction: row;
-    height: 50%;
+    height: 60%;
 
 }
 .tituloindex li{
@@ -130,37 +129,113 @@ h2{
     display: flex; 
     align-items: center;  
     flex-direction: column; 
-    width: 30%;
+    width: 40%;
 }
 .tituloindex li img{
     border-radius: 15pt;
-    height: 80%;   
-    width: 80%;
+    height: 60%;   
+    width: 70%;
 }
-.tituloindex li:hover{
-    transform:scale(1.2);
-    width: 40%;
-    height: 100%;
-    border-radius: 15pt;
-    background-color: rgb(49, 49, 49);
-    border: rgb(0, 0, 0) 1pt solid;
-}
+
 .tituloindex a{
-    
     display: flex;
     margin: 1%;
     padding: 1%;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: 30%;
+    text-decoration: none;
+
+    
 }
 a:link{
     color: white;
 }
 a:visited{
-    color: black;
+    color: rgb(255, 255, 255);
 }
-a:hover{
-    background-color: black;
+
+
+/*Estilos a aplicar cuando el ratón pasa por encima del menú del index*/
+
+.tituloindex li:hover{
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    border-radius: 50pt;
+}
+.tituloindex li:hover img{
+    width: 0%;
+}
+.tituloindex li:hover a{
+    background-color: rgba(0, 0, 0, 0.583);
     border-radius: 15pt;
 }
-a:hover:visited{
-    background-color: white;
+
+.menuinfo:hover{
+    background-image: url("../img/inforclamido.png");   
 }
+
+.menuterrario:hover{
+    background-image: url("../img/terrario.png");
+}
+
+.menucurios:hover{
+    background-image: url("../img/curiosidaades.png");
+}
+
+/*Footer*/
+
+footer{
+    display: flex;
+    background-color: black;
+    margin-top: 1%;
+}
+footer div{
+    background-color: rgba(49, 49, 49, 0.795);
+    border-radius: 15pt;
+    margin: 1%;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    font-size: 15pt;
+}
+footer .autores{
+    width: 25%;
+}
+
+footer .rrss{
+    width: 25%;
+    }
+.rrss div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.rrss div a{
+    display: flex;
+    width:  20%;
+    justify-content: center;
+    border-radius: 25pt;
+}
+.rrss div a img{
+    width: 100%;
+    border-radius: 25pt;   
+}
+.rrss span{
+    text-align: center;
+    font-size: 25pt;
+}
+footer .listafoot{
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .listafoot li{
+    margin:1%;
+    list-style: none;
+}
+
