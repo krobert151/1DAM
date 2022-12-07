@@ -1,68 +1,45 @@
+/*Común*/
 body{
     padding-left: 0;
     padding-right: 0;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin:0;
     background-size: cover;
     background-image: url("../img/background.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     position:absolute;
     width: 100%;
-    color: white;
     font-size: 200%;
-    font-family: Arial, Helvetica, sans-serif;
 
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
 
 @font-face {
-    font-family:'title' ;
+    font-family:'title';
     src: url("../fonts/Plane\ Crash.ttf");
 }
-.portada{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-}
-.portada img{
-    display: block;
-    border: rgb(0, 0, 0) 1px solid;
-    width: 800px;
-    border-radius: 50%;
-}
-.portada a :hover{
-    transform:scale(1.2);
-    border-radius: 50%;
-    border: rgb(0, 0, 0) 4pt solid;
-}
-/*Todo lo de arriba es lo único que pertenece  exclusivamente a la portada excepto el body*/
 header{
     width: 100%;
-    height: 10%;
     font-family: 'title';
     font-size: 20px;
     background-color: rgba(85, 107, 47, 0.788);
     display: flex;
     align-items: center;
-    justify-content: center;
-    position:fixed;
+    justify-content: center;    
 }
-.contenido{
-    display: flex;
+hr {
     width: 100%;
-    margin-top: 5%;
-
+}
+h4{
+    text-indent: 1;
 }
 main{
     display: flex;
     flex-direction: column;
-    margin-top: 1%;
     width: 90%;
     margin-left: 1%;
     background-color: rgba(49, 49, 49, 0.795);
@@ -70,10 +47,16 @@ main{
     padding: 3%;
 
 }
+.contenido{
+    display: flex;
+    width: 100%;
+    margin-top: 1%;
+}
 .contenido aside{
     display: flex;
     background-color: hsla(0, 0%, 100%, 0.788);
-    margin: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
     border-radius: 25pt;
     width: 10%;
     height: 800px;
@@ -92,15 +75,88 @@ main{
 }
 .contenido aside div :hover{
     transform:scale(1.1);
-    border: red solid 1px;
+    border: rgb(0, 0, 0) solid 1px;
 }
-hr {
-    width: 100%;
+
+/*Footer*/
+
+footer{
+    display: flex;
+    background-color: black;
+    margin-top: 1%;
+}
+footer div{
+    background-color: rgba(49, 49, 49, 0.795);
+    border-radius: 15pt;
+    margin: 1%;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    font-size: 15pt;
+}
+footer .autores{
+    width: 25%;
+}
+
+footer .rrss{
+    width: 25%;
+    }
+.rrss div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 
 }
+.rrss div a{
+    display: flex;
+    width:  20%;
+    justify-content: center;
+    border-radius: 25pt;
+}
+.rrss div a img{
+    width: 100%;
+    border-radius: 25pt;   
+}
+.rrss span{
+    text-align: center;
+    font-size: 25pt;
+}
+footer .listafoot{
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+}
+footer .listafoot li{
+    margin:1%;
+    list-style: none;
+}
+/*Fin de estilos en común*/
+/*Estilos de solo la portada*/
+.portada{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.portada img{
+    display: block;
+    height: 700px;
+    border: rgb(0, 0, 0) 1px solid;
+    border-radius: 50%;
+}
+.portada a :hover{
+    transform:scale(1.2);
+    border-radius: 50%;
+    border: rgb(0, 0, 0) 4pt solid;
+}
+/*Fin de estilos que se incluyen solo a la portada*/
 h2{
     font-family: 'title';
-
+}
+h3{
+    text-decoration:underline
 }
 .elclamido img{
     display: block;
@@ -119,48 +175,153 @@ h2{
 .tituloindex ul{
     display: flex;
     flex-direction: row;
-    height: 50%;
+    height: 60%;
 
 }
 .tituloindex li{
     background-color: rgba(49, 49, 49, 0.822);
     margin: 1%;
     padding: 1%;
-    border-radius: 5pt;
+    border-radius: 10pt;
     display: flex; 
     align-items: center;  
     flex-direction: column; 
-    width: 30%;
+    width: 40%;
 }
 .tituloindex li img{
     border-radius: 15pt;
-    height: 80%;   
-    width: 80%;
+    height: 70%;   
+    width: 70%;
 }
-.tituloindex li:hover{
-    transform:scale(1.2);
-    width: 40%;
-    height: 100%;
-    border-radius: 15pt;
-    background-color: rgb(49, 49, 49);
-    border: rgb(0, 0, 0) 1pt solid;
-}
+
 .tituloindex a{
-    
     display: flex;
     margin: 1%;
     padding: 1%;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: 30%;
+    text-decoration: none;
+
+    
 }
 a:link{
     color: white;
 }
 a:visited{
-    color: black;
+    color: rgb(255, 255, 255);
 }
-a:hover{
-    background-color: black;
+/*Estilos a aplicar cuando el ratón pasa por encima del menú del index*/
+
+.tituloindex li:hover{
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    border-radius: 50pt;
+}
+.tituloindex li:hover img{
+    width: 0%;
+}
+.tituloindex li:hover a{
+    background-color: rgba(0, 0, 0, 0.583);
     border-radius: 15pt;
 }
-a:hover:visited{
-    background-color: white;
+
+.menuinfo:hover{
+    background-image: url("../img/inforclamido.png");   
 }
+
+.menuterrario:hover{
+    background-image: url("../img/terrario.png");
+}
+
+.menucurios:hover{
+    background-image: url("../img/curiosidaades.png");
+}
+/*Estilos a aplicar a las 3 páginas de contenidos*/
+.menu{
+    height: 60px;
+    font-size: 20px;
+    background-color: rgba(29, 29, 29, 0.788);
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 5%;
+    
+}
+.menu .imghome{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width:  40px;
+    margin-right: 0.5%;
+}
+.imghome img{
+    height: 20px;
+    width: 20px;
+}
+.menu span{
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    
+}
+.menu span a:link{
+    text-decoration: none;
+}
+
+.menu span:hover{
+    background-color: black;
+    border-radius: 10pt;
+    border: grey 1px inset;
+}
+.menu .imghome:hover{
+    background-color: black;
+    border-radius: 10pt;
+    border: grey 1px outset;
+
+}
+.infofont{
+    font-size: 20px;
+}
+/*Estilos a aplicar para la segundoa página de contenido 2*/
+.terrario, .mascota{
+    display: flex;
+}
+.terrario .text{
+    width: 80%;
+}
+.mascota img{
+    display: block;
+    height: 400px;
+    border-radius: 15pt;
+    margin-right: 3%;
+    margin-top: 2%;
+}
+.terrario .imagen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 20%;
+    border-radius: 15pt;
+    margin-left: 3%;
+    margin-top: 2%;
+}
+.terrario .imagen img{
+    display: block;
+    border-radius: 15pt;
+    width: 100%;
+}
+
+
+
+
+
+
