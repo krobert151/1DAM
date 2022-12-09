@@ -23,6 +23,7 @@ body{
     src: url("../fonts/Plane\ Crash.ttf");
 }
 header{
+    box-sizing: border-box;
     width: 100%;
     font-family: 'title';
     font-size: 20px;
@@ -40,7 +41,7 @@ h4{
 main{
     display: flex;
     flex-direction: column;
-    width: 90%;
+    flex: 9 9 90%;
     margin-left: 1%;
     background-color: rgba(49, 49, 49, 0.795);
     border-radius: 25pt;
@@ -54,11 +55,11 @@ main{
 }
 .contenido aside{
     display: flex;
+    flex: 1 1 10%;
     background-color: hsla(0, 0%, 100%, 0.788);
     margin-left: 1%;
     margin-right: 1%;
     border-radius: 25pt;
-    width: 10%;
     height: 800px;
     flex-direction: column;
     padding: 1%;
@@ -67,25 +68,31 @@ main{
 }
 .contenido aside div{
     display: flex;
-    align-items: center;
+    background-color: white;
+    border-radius: 15pt;
 }
 .contenido aside div img{
     width: 100%;
     border-radius: 15pt;
+    
 }
-.contenido aside div :hover{
+.contenido aside div:hover{
     transform:scale(1.1);
     border: rgb(0, 0, 0) solid 1px;
+    border-radius: 15pt;
+
 }
+
 
 /*Footer*/
 
 footer{
+    box-sizing: border-box;
     display: flex;
     background-color: black;
     margin-top: 1%;
 }
-footer div{
+footer .autores,.rrss,.listafoot{
     background-color: rgba(49, 49, 49, 0.795);
     border-radius: 15pt;
     margin: 1%;
@@ -99,25 +106,37 @@ footer .autores,.rrss,.listafoot{
 }
 
 .rrss div{
+    flex: 4 4 80%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    height: 100%;
+    align-items: center;
 
+}
+.rrss span{
+    flex: 1 1 20%;
+    text-align: center;
+    font-size: 20pt;
 }
 .rrss div a{
     display: flex;
-    width:  20%;
+    flex: 1 1 30%;
+    margin-left: 5%;
+    margin-right: 5%;
     justify-content: center;
     border-radius: 25pt;
+
+}
+.rrss div a:hover{
+    border: rgb(255, 255, 255) 1pt solid;
+
 }
 .rrss div a img{
     width: 100%;
     border-radius: 25pt;   
 }
-.rrss span{
-    text-align: center;
-    font-size: 25pt;
-}
+
 footer .listafoot{
     display: flex;
     justify-content: space-around;
@@ -125,6 +144,9 @@ footer .listafoot{
 footer .listafoot li{
     margin:1%;
     list-style: none;
+}
+footer a:hover{
+    color: sandybrown;
 }
 /*Fin de estilos en común*/
 /*Estilos de solo la portada*/
@@ -134,18 +156,20 @@ footer .listafoot li{
     height: 100%;
     align-items: center;
     justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .portada img{
-    display: block;
-    height: 700px;
-    border: rgb(0, 0, 0) 1px solid;
     border-radius: 50%;
+    border: black 2px solid;
 }
+
+
 .portada a :hover{
     transform:scale(1.2);
     border-radius: 50%;
-    border: rgb(0, 0, 0) 4pt solid;
+    border: rgb(0, 0, 0) 5pt solid;
 }
 /*Fin de estilos que se incluyen solo a la portada*/
 h2{
@@ -167,6 +191,7 @@ h3{
     display: flex;
     flex-direction: row;
 }
+   
 
 .tituloindex ul{
     display: flex;
@@ -186,7 +211,7 @@ h3{
 }
 .tituloindex li img{
     border-radius: 15pt;
-    height: 70%;   
+    height: 60%;   
     width: 70%;
 }
 
@@ -237,6 +262,7 @@ a:visited{
 }
 /*Estilos a aplicar a las 3 páginas de contenidos*/
 .menu{
+    box-sizing: border-box;
     height: 60px;
     font-size: 20px;
     background-color: rgba(29, 29, 29, 0.788);
@@ -291,7 +317,10 @@ a:visited{
     display: flex;
 }
 .terrario .text{
-    flex: 3 3 80%;
+    flex: 3 3 70%;
+}
+.mascota div{
+    flex: 4 4 80%;
 }
 .mascota img{
     display: block;
@@ -306,7 +335,7 @@ a:visited{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    flex: 1 1 20%;
+    flex: 1 1 30%;
     border-radius: 15pt;
     margin-left: 3%;
     margin-top: 2%;
@@ -316,9 +345,9 @@ a:visited{
     border-radius: 15pt;
     width: 100%;
 }
-
-
-
-
-
-
+.videoterrario{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3%;
+    padding-top: 3%;
+}
