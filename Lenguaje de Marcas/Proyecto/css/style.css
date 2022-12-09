@@ -2,10 +2,7 @@
 body{
     padding-left: 0;
     padding-right: 0;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin:0;
     background-size: cover;
     background-image: url("../img/background.png");
     background-repeat: no-repeat;
@@ -14,11 +11,12 @@ body{
     flex-direction: column;
     position:absolute;
     width: 100%;
-    color: white;
     font-size: 200%;
-    font-family: Arial, Helvetica, sans-serif;
 
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
 
 @font-face {
     font-family:'title';
@@ -31,11 +29,13 @@ header{
     background-color: rgba(85, 107, 47, 0.788);
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center;    
 }
 hr {
     width: 100%;
+}
+h4{
+    text-indent: 1;
 }
 main{
     display: flex;
@@ -75,8 +75,9 @@ main{
 }
 .contenido aside div :hover{
     transform:scale(1.1);
-    border: red solid 1px;
+    border: rgb(0, 0, 0) solid 1px;
 }
+
 /*Footer*/
 
 footer{
@@ -93,13 +94,10 @@ footer div{
     flex-direction: column;
     font-size: 15pt;
 }
-footer .autores{
-    width: 25%;
+footer .autores,.rrss,.listafoot{
+    flex: 1 1 25%;
 }
 
-footer .rrss{
-    width: 25%;
-    }
 .rrss div{
     display: flex;
     flex-direction: row;
@@ -121,7 +119,6 @@ footer .rrss{
     font-size: 25pt;
 }
 footer .listafoot{
-    width: 25%;
     display: flex;
     justify-content: space-around;
 }
@@ -138,10 +135,11 @@ footer .listafoot li{
     align-items: center;
     justify-content: center;
 }
+
 .portada img{
     display: block;
+    height: 700px;
     border: rgb(0, 0, 0) 1px solid;
-    height: 80%;
     border-radius: 50%;
 }
 .portada a :hover{
@@ -150,11 +148,11 @@ footer .listafoot li{
     border: rgb(0, 0, 0) 4pt solid;
 }
 /*Fin de estilos que se incluyen solo a la portada*/
-
-
 h2{
     font-family: 'title';
-
+}
+h3{
+    text-decoration:underline
 }
 .elclamido img{
     display: block;
@@ -180,7 +178,7 @@ h2{
     background-color: rgba(49, 49, 49, 0.822);
     margin: 1%;
     padding: 1%;
-    border-radius: 5pt;
+    border-radius: 10pt;
     display: flex; 
     align-items: center;  
     flex-direction: column; 
@@ -188,7 +186,7 @@ h2{
 }
 .tituloindex li img{
     border-radius: 15pt;
-    height: 60%;   
+    height: 70%;   
     width: 70%;
 }
 
@@ -285,5 +283,42 @@ a:visited{
     border: grey 1px outset;
 
 }
+.infofont{
+    font-size: 20px;
+}
+/*Estilos a aplicar para la segundoa página de contenido 2*/
+.terrario, .mascota{
+    display: flex;
+}
+.terrario .text{
+    flex: 3 3 80%;
+}
+.mascota img{
+    display: block;
+    flex: 1 1 20%;
+    height: 80%;
+    border-radius: 15pt;
+    margin-right: 3%;
+    margin-top: 2%;
+}
+.terrario .imagen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 1 1 20%;
+    border-radius: 15pt;
+    margin-left: 3%;
+    margin-top: 2%;
+}
+.terrario .imagen img{
+    display: block;
+    border-radius: 15pt;
+    width: 100%;
+}
+
+
+
+
 
 
