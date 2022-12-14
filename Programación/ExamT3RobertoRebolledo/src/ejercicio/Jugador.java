@@ -92,11 +92,12 @@ public class Jugador {
 	}
 	public double calcularSueldo (boolean boo, int porcentaje ) {
 		
+		double sueldoTotal;
 		if(boo) {
 			double cien=100;
 			sueldoTotal=sueldoBase+((sueldoBase*porcentaje)/cien);
 		}else {
-			
+			sueldoTotal=sueldoBase;
 		}
 		return sueldoTotal;
 	}
@@ -124,22 +125,22 @@ public class Jugador {
 			goles[i]=newGoles[i];
 		}
 	}
-	public boolean comprobarEdad () {
+	public boolean comprobarEdad (int topeEdad) {
 		
-		if(edad>=40) {
+		if(edad>=topeEdad) {
 			return true;
 		}else {
 			return false;
 		}
 		
 	}
-	public void mostrarRetirada (){
+	public void mostrarRetirada (int topeEdad){
 		
-		if(comprobarEdad()) {
+		if(comprobarEdad(topeEdad)) {
 			
 			System.out.println("Es hora de que "+getNombre()+" vaya pensando en retirarse.");
 		}else {
-			System.out.println("Sige en una buena edad.");
+			System.out.println("Sigue en una buena edad.");
 		}
 		
 	}

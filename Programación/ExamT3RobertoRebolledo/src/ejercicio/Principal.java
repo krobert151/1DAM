@@ -7,16 +7,12 @@ public class Principal {
 	public static void main(String[] args) {
 		/*Hay un toString oculto guardado dentro del switch para ayudar al programador a ver los datos, el número oculto es 151, solo funciona una vez calculado el sueldoTotal*/
 		Jugador jug1;
-		int menu,partidos=7,hasta,desde,edad,minGoles,porcentaje,numGoles,diaPartido,newGol;
+		int topeEdad,menu,partidos=7,hasta,desde,edad,minGoles,porcentaje,numGoles,diaPartido,newGol;
 		int goles[];
+		goles= new int [partidos];
 		String nombre;
 		double sueldoBase,sueldoTotal;
 		
-
-		goles= new int [partidos];
-		for (int i = 0; i < goles.length; i++) {
-			goles[i]=0;
-		}
 		System.out.println("Bienvenidos al programa");
 		System.out.println("Antes de empezar vamos a registrar los datos de nuestro jugador");
 		System.out.println("Nombre del Jugador");
@@ -92,8 +88,9 @@ public class Principal {
 					break;
 					
 				case 6:
-					
-					jug1.mostrarRetirada();
+					System.out.println("A qué edad se debería jubilar.");
+					topeEdad=Leer.datoInt();
+					jug1.mostrarRetirada(topeEdad);
 					
 					break;
 				case 0:
