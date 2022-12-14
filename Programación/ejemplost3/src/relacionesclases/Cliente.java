@@ -24,6 +24,13 @@ public class Cliente {
 	public String toString() {
 		return "Cliente [nombre=" + nombre + ", edad=" + edad + "]";
 	}
-	
+	public double mostrarSenior(int tope) {
+		double pension=500;
+		if(edad>=tope) {
+			return pension;
+		}else {
+			return 0;
+		}
+	}
 	
 }

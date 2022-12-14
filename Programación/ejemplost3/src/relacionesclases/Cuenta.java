@@ -62,6 +62,12 @@ public class Cuenta {
 				+ interes + "]";
 	}
 	
+	//Métodos
+	
+	public double ingresarPension (int tope) {
+		return saldo+c.mostrarSenior(tope);
+	}
+	
 	
 	
 }

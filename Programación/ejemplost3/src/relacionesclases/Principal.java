@@ -8,7 +8,7 @@ public class Principal {
 		
 		// TODO Auto-generated method stub
 		String nombre;
-		int edad;
+		int edad,tope=65;
 		long numCuenta;
 		double saldo, interes;
 		Cliente c;
@@ -27,9 +27,8 @@ public class Principal {
 		System.out.println("Datos del cliente "+c);
 		cu = new Cuenta (numCuenta,nombre,c,saldo,interes);
 		System.out.println("Datos de la cuenta "+cu);
-		
 		System.out.println(cu.getC().getEdad());
-		
+		System.out.printf("Su saldo es: %.2f ",cu.ingresarPension(tope));
 	}
 
 }
