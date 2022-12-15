@@ -5,11 +5,12 @@ FROM climatologia;
 --Andalucía que comiencen por AL para el mes de mayo de 2019. Ojo, no se puede utilizar 
 --LIKE ni ILIKE.
 
-SELECT temperatura_media, starts_with (estacion,'AL') AS "empieza_por_al"
+SELECT AVG (temperatura_media)
 FROM climatologia
-WHERE fecha BETWEEN '2019-06-01' AND '2019-06-30'
-AND provincia IN ('Granada','Almería','Jaén','Córdoba','Málaga','Sevilla','Huelva','Cádiz')
-ORDER BY empieza_por_al DESC;
+WHERE provincia IN ('Almería','Cádiz','Córdoba','Huelva','Jaén','Granada','Málaga','Sevilla') 
+AND (fecha <= '2019-05-31' AND fecha >= '2019-05-01') AND (starts_with (estacion,'Al') = '1');
+
+
 
 --Selecciona los datos meteorológicos de la provincia de Jaén para el mes de Noviembre de 
 --2019. Debe aparecer la fecha, estación, temperatura_media y la precipitacion_total. La 
