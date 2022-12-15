@@ -6,34 +6,36 @@ header{
     padding: 1pt;
     color:rgb(255, 255, 255);
     background-color: rgb(17, 135, 252);
-    width: 100%;
-    font-size: 40pt;
+    font-size: 20pt;
     text-align: center;
 }
 nav{
     background-color: rgb(160, 207, 75);
     color: white;
-    width: 100%;
-    font-size: 30pt;
+    font-size: 15pt;
     padding:1pt;
     text-indent: 5%;
 }
 .centro{
     display: flex;
+    width: 100%;
 }
 aside{
     width: 25%;
     background-color: rgb(17, 135, 252);
     color: white;
     padding-left: 1%;
-    font-size: 200%;
+    font-size: 150%;
+    box-sizing: border-box;
 }
 main{
     width: 48%;
     padding-left: 2%;
     padding-right: 2%;
-    font-size: 200%;
+    font-size: 150%;
     background-color: white;
+    box-sizing: border-box;
+
 }
 img{
     width: 50%;
@@ -41,6 +43,8 @@ img{
 }
 .galeria{
     text-align: center;
+    box-sizing: border-box;
+
 }
 .publicidad{
     background-color: white;
@@ -58,7 +62,7 @@ footer{
     background-color: rgb(160, 207, 75);
     color: white;
     width: 100%;
-    font-size: 30pt;
+    font-size: 15pt;
     padding:1pt;
     text-indent: 5%;
 }
