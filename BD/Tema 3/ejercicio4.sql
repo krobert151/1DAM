@@ -5,10 +5,20 @@ FROM climatologia;
 --Andalucía que comiencen por AL para el mes de mayo de 2019. Ojo, no se puede utilizar 
 --LIKE ni ILIKE.
 
-SELECT AVG (temperatura_media)
+SELECT ROUND(AVG(temperatura_media),2)
 FROM climatologia
 WHERE provincia IN ('Almería','Cádiz','Córdoba','Huelva','Jaén','Granada','Málaga','Sevilla') 
-AND (fecha <= '2019-05-31' AND fecha >= '2019-05-01') AND (starts_with (estacion,'Al') = '1');
+AND (fecha <= '2019-05-31' AND fecha >= '2019-05-01') 
+AND (starts_with (estacion,'Al'));
+
+--Correccion 
+
+SELECT ROUND(AVG(temperatura_media),2)
+FROM climatologia
+WHERE provincia IN ('Almería','Cádiz','Córdoba','Huelva','Jaén','Granada','Málaga','Sevilla') 
+AND fecha BETWEEN '2019-05-01'::date AND '2019-05-31'::date 
+AND (STARTS_WITH (UPPER(estacion),'AL'));
+
 
 
 

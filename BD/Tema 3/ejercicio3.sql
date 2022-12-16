@@ -46,3 +46,20 @@ AND precipitacion_total > 0;
 --total de más de 50 litros por metro cuadrado, y donde el % de la precipitación caída de 6 a 12 
 --horas sea entre el 60 y el 80%. Ordena la salida por precipitación total descendente, y fecha 
 --ascendente.
+
+SELECT *
+FROM climatologia
+WHERE precipitacion_total > 50 
+AND precipitacion_6_a_12 BETWEEN precipitacion_total*0.6 AND precipitacion_total*0.8
+ORDER BY precipitacion_total DESC, fecha;
+
+--Esto hace que busque las tuplas en las que entre el 60% y el 80% de la precipitacion_total 
+--corresponda a la precipitacion_6_a_12
+
+--otra solucion
+
+SELECT *
+FROM climatologia
+WHERE precipitacion_total > 50 
+AND (precipitacion_6_a_12/ precipitacion_total)  BETWEEN 0.6 AND 0.8
+ORDER BY precipitacion_total DESC, fecha;

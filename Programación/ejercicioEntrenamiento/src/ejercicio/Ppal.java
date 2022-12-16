@@ -56,7 +56,7 @@ public class Ppal {
 			
 			case 4:
 				ftotal=op.multiplicar(f1, f2);
-				System.out.println(ftotal);
+				op.imprimirFraccion(ftotal);
 				break;
 				
 			case 5:

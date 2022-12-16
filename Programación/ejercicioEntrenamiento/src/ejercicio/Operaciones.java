@@ -13,7 +13,7 @@ public class Operaciones {
 	
 	public Fraccion cambiarSigno (int num, int den) {
 		
-		return new Fraccion (num * (-1), den);
+		return new Fraccion ( -num, den);
 	}
 	
 	public Fraccion dividir (Fraccion num1, Fraccion num2) {
@@ -30,7 +30,11 @@ public class Operaciones {
 		return div;
 		
 	}
-	
+	public void imprimirFraccion (Fraccion f) {
+		System.out.println(f.getNumerador());
+		System.out.println("─");
+		System.out.println(f.getDenominador());
+	}
 	
 	
 	
