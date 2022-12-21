@@ -1,0 +1,79 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/fondo_carrousel.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+div{
+    display: flex;
+}
+.carrousel{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
+    width: 70%;
+    border: 1px rgba(255, 255, 255, 0.6) solid;
+    border-radius: 50pt;
+}
+.flechita{
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-left:5px;
+    padding-right: 5px;
+    flex: 1 1 10%
+
+}
+.flechita a{
+    margin-left:5px;
+    margin-right: 5px;
+    
+}
+.flechita a:hover{
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: rgba(146, 146, 146, 0.6);
+}
+.izquierda{
+    border-top-left-radius: 50pt;
+    
+}
+.derecha{
+    border-top-right-radius: 50pt;
+}
+
+.imagen{
+    display: flex;
+    flex: 4 4 80%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-top: 10pt;
+    padding-bottom: 10pt;
+}
+.flechita img{
+    width: 50%;
+    margin: 15pt;
+    
+}
+.imagen img{
+    border-radius: 15pt;
+    width: 100%;
+
+}
+.piefoto{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 40px;
+    border-bottom-right-radius: 50pt;
+    border-bottom-left-radius: 50pt;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    color: rgb(235, 235, 235);
+}

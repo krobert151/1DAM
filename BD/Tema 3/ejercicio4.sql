@@ -39,16 +39,18 @@ AND (STARTS_WITH (UPPER(estacion),'AL'));
 SELECT fecha, estacion ,temperatura_media ,
 CASE  
 	WHEN precipitacion_total > 50 then 'CHUZOS DE PUNTA'
-	WHEN precipitacion_total BETWEEN 40 AND 49 then 'A CÁNTAROS'
-	WHEN precipitacion_total BETWEEN 25 AND 39 then 'MUCHA LLUVIA'
-	WHEN precipitacion_total BETWEEN 10 AND 24 then 'FALTA LE HACÍA AL CAMPO'
+	WHEN precipitacion_total BETWEEN 40 AND 50 then 'A CÁNTAROS'
+	WHEN precipitacion_total BETWEEN 25 AND 40 then 'MUCHA LLUVIA'
+	WHEN precipitacion_total BETWEEN 10 AND 25 then 'FALTA LE HACÍA AL CAMPO'
 	WHEN precipitacion_total < 10 then'HA LLOVIDO POCO'
+	WHEN precipitacion_total < 0 then 'NO HA LLOVIDO'
 	WHEN precipitacion_total IS NULL then 'NO HA LLOVIDO'
 	
 	END as "precipitacion_total"
 FROM climatologia
 WHERE provincia = 'Jaén'
-ORDER BY fecha , estacion DESC;
+AND fecha::text ILIKE '2019-11%'
+ORDER BY fecha , estacion ;
 
 --Selecciona, mostrando todos los datos en mayúsculas, aquellos datos de climatología 
 --donde la hora de máxima temperatura fueran las 14:00 para un día cualquiera de Marzo 
