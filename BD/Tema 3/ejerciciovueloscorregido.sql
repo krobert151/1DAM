@@ -4,7 +4,7 @@ SELECT COUNT(*)
 FROM vuelos
 WHERE desde='Berlín'
 AND (hasta='Londres'
-AND salida BETWEEN '2020-09-01 00:00:00'::date AND '2020-12-31 23:59:59'::date);
+AND salida::date BETWEEN '2020-09-01 00:00:00' AND '2020-12-31 23:59:59');
 
 
 --El precio final de un vuelo se obtiene aplicando el descuento al precio. Selecciona, mostrando todos 
@@ -12,8 +12,9 @@ AND salida BETWEEN '2020-09-01 00:00:00'::date AND '2020-12-31 23:59:59'::date);
 --que salen en el mes de Diciembre de 2020 desde Sevilla o Málaga y llegan a Madrid o Barcelona.
 
 SELECT id, salida, desde, llegada, hasta , precio
-,COALESCE(descuento,0) AS "descuento",
-ROUND(precio - ((precio* COALESCE(descuento,0) )/100),2) AS "precio_final"
+ROUND(precio - ((precio* COALESCE(descuento,0) )/100),2) AS "precio_no_chachi",--forma mediochachi
+COALESCE(ROUND(precio * (1-(descuento/100)),2),precio ) AS "precio_chachi"--forma tela de chachi
+
 FROM vuelos
 WHERE desde IN ('Sevilla','Málaga')
 AND hasta IN ('Madrid','Barcelona')
