@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+}
+header{
+    background-color: rgb(238, 78, 78);
+    border: 5pt solid red;
+}
+header h1{
+    text-align: center;
+    color: white;
+}
+body{
+    position: relative;
+    top :-9px;
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    padding: 0%;
+    margin-top: 0%;
+    background-color: rgba(139, 137, 8, 0.137);
+    color: white;
+}
+nav ul a{
+    flex: 1 1 20%;
+    text-align: center;
+    border: white 4px solid;
+    padding: 2px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+nav ul a:hover{
+    background-color: rgb(255, 187, 0);
+    color:rgb(255, 255, 255);
+}
