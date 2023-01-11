@@ -35,5 +35,13 @@ SELECT *
 FROM departments;
 
 SELECT first_name, last_name
-FROM employees JOIN departments USING (department_id) JOIN locations USING (location_id)
+FROM employees JOIN departments USING (department_id) 
+JOIN locations USING (location_id)
 WHERE city != 'Oxford'; 
+
+SELECT COUNT(*)
+FROM employees JOIN departments USING (department_id) 
+JOIN locations USING (location_id)
+JOIN countries USING (country_id)
+JOIN regions USING (region_id)
+WHERE region_name = 'Europe';
