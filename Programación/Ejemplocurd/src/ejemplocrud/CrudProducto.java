@@ -83,13 +83,30 @@ public class CrudProducto {
 		}
 		
 	}
-	public void mostrarLista (Producto[] prod) {
+	public Producto[] findAll () {
 		
-		for (int i = 0; i < lista.length; i++) {
-			System.out.print(prod[i].getNombre());
-			System.out.print("\n\n");
-			System.out.println(prod[i].getPrecioUnitario());
+		return lista;
+		
+	}
+	public int findProduct3(Producto p) {
+		
+		int i =0;
+		boolean encontrado = false;
+		
+		while (i<lista.length && !encontrado) {
+			
+			Producto deLista = lista[i];
+			if (p.compareTo(deLista)==0)
+				encontrado = true;
+			else
+				i++;
+		
 		}
+		if (encontrado)
+			return i;
+		
+		else 
+			return -1;
 		
 	}
 }

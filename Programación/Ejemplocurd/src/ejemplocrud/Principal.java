@@ -22,7 +22,7 @@ public class Principal {
 			switch(menu) {
 			
 			case 1:
-				crud.mostrarLista(listaCrud);
+				crud.findAll();
 				System.out.println("Diga el código a buscar");
 				codigoABuscar=Leer.dato();
 				System.out.println(crud.findById(codigoABuscar));

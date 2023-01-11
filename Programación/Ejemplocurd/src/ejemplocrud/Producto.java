@@ -53,7 +53,16 @@ public class Producto {
 		return "Producto [codigo=" + codigo + ", nombre=" + nombre + ", precioUnitario=" + precioUnitario + ", activo="
 				+ activo + "]";
 	}
-	
+	public int compareTo(Producto o) {
+		
+		if (this.codigo.equalsIgnoreCase(o.getCodigo())
+				&& this.nombre.equalsIgnoreCase(o.getNombre())
+				&& this.precioUnitario == (o.getPrecioUnitario()))
+			return 0;
+		
+		return 1;
+		
+	}
 	
 	
 }
