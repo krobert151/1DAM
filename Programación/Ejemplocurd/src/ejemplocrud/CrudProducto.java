@@ -31,11 +31,7 @@ public class CrudProducto {
 		lista[posicion]=p;
 	}
 	
-	public void editPrecio(String codigo, float precioN) {
 		
-		
-	}
-	
 	public Producto findById (String codigo) {
 		
 		int i=0;
@@ -88,7 +84,7 @@ public class CrudProducto {
 		return lista;
 		
 	}
-	public int findProduct3(Producto p) {
+	public int findProduct(Producto p) {
 		
 		int i =0;
 		boolean encontrado = false;
@@ -108,5 +104,35 @@ public class CrudProducto {
 		else 
 			return -1;
 		
+	}
+	public void editPrecio (String codigo, float precioN) {
+		
+		int index= findByIdV2(codigo);
+		if (index >= 0)
+			lista[index].setPrecioUnitario(precioN);
+		
+	}
+	public void delete(String codigo) {
+		
+		int index= findByIdV2(codigo);
+		if (index >= 0 )
+			lista[index].setActivo(false);
+		
+	}
+	public void activate(Producto p) {
+		int index = findProduct(p);
+		if (index >=0)
+			lista[index].setActivo(true);
+	}
+	public void imprimirTodosLosProductos() {
+		for (int i = 0; i < lista.length; i++) {
+			System.out.println((i+1)+". "+lista[i]);
+		}
+	}
+	public void imprimirSoloActivos() {
+		for (int i = 0; i < lista.length && lista[i] != null; i++) {
+			if (lista[i].isActivo())
+					System.out.println((i+1)+". "+lista[i]);
+		}
 	}
 }

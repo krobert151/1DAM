@@ -5,13 +5,12 @@ import utilidades.Leer;
 public class Principal {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
+				
 		CrudProducto crud;
 		Producto []listaCrud;
 		int tam,menu,contador=0;
 		String nombre,codigo,codigoABuscar;
-		float precioU;
+		float precioU,precioNuevo;
 		System.out.println("Diga cuántos productos habrá");
 		tam=Leer.datoInt();
 		listaCrud= new Producto [tam];
@@ -41,9 +40,23 @@ public class Principal {
 				
 			case 3:
 				
-				
+				System.out.println("Indique el código del producto a modificar:");
+				crud.imprimirSoloActivos();
+				codigo=Leer.dato();
+				System.out.println("Indique el nuevo precio");
+				precioNuevo=Leer.datoFloat();
+				crud.editPrecio(codigo, precioNuevo);
 				
 				break;
+			
+			case 4:
+				
+				System.out.println("Diga el código del producto que desea borrar");
+				codigo = Leer.dato();
+				crud.delete(codigo);
+				
+				break;
+			
 				
 			}
 			
@@ -56,7 +69,8 @@ public class Principal {
 		
 		System.out.println("1.-Listar productos");
 		System.out.println("2.-Añadir un nuevo producto");
-		System.out.println("3.-");
+		System.out.println("3.-Modificar precio");
+		System.out.println("4.-Borrar producto");
 		
 	}
 
